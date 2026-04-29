@@ -1,26 +1,116 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand Colors */
+  --color-brand-bg: #0D0D0D;
+  --color-brand-surface1: #111111;
+  --color-brand-surface2: #161616;
+  --color-brand-white: #F5F0E8;
+  --color-brand-muted: #4A4A4A;
+  --color-brand-accent: #C8102E;
+  --color-brand-accent-dim: rgba(200, 16, 46, 0.15);
+  --color-brand-blue: #2A6EDB;
+  --color-brand-stripe: rgba(255, 255, 255, 0.025);
+  --color-brand-border: rgba(255, 255, 255, 0.06);
+
+  /* Fonts */
+  --font-display: var(--font-barlow-condensed);
+  --font-body: var(--font-dm-sans);
+
+  /* Easing */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #0D0D0D;
+  --foreground: #F5F0E8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0D0D0D;
+  color: #F5F0E8;
+  font-family: var(--font-dm-sans, 'DM Sans', sans-serif);
+  overflow-x: hidden;
+}
+
+/* Diagonal stripe texture utility */
+.stripe-texture {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 38px,
+    rgba(255, 255, 255, 0.025) 38px,
+    rgba(255, 255, 255, 0.025) 40px
+  );
+}
+
+/* Gold gradient text */
+.gold-text {
+  background: linear-gradient(135deg, #C8102E 0%, #E63946 50%, #C8102E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Clip path reveal animation */
+@keyframes clip-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0 0% 0 0); }
+}
+
+/* Count up animation base */
+.count-up {
+  font-variant-numeric: tabular-nums;
+}
+
+/* SVG stroke draw */
+@keyframes draw-line {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Pulse ring for WhatsApp button */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0D0D0D; }
+::-webkit-scrollbar-thumb { background: #C8102E; border-radius: 2px; }
+
+/* Selection */
+::selection {
+  background: rgba(200, 16, 46, 0.3);
+  color: #F5F0E8;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #C8102E;
+  outline-offset: 2px;
 }
