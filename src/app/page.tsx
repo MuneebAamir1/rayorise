@@ -1,11 +1,12 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustStrip from "@/components/TrustStrip";
-import FlagshipProduct from "@/components/FlagshipProduct";
-import ManufacturingProof from "@/components/ManufacturingProof";
-import ProductShowcase from "@/components/ProductShowcase";
-import Process from "@/components/Process";
 import About from "@/components/About";
+import ProductShowcase from "@/components/ProductShowcase";
+import CustomizationCapabilities from "@/components/CustomizationCapabilities";
+import Process from "@/components/Process";
+import ManufacturingProof from "@/components/ManufacturingProof";
+import FlagshipProduct from "@/components/FlagshipProduct";
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
@@ -17,11 +18,12 @@ export default function Home() {
       <main>
         <Hero />
         <TrustStrip />
-        <FlagshipProduct />
-        <ManufacturingProof />
-        <ProductShowcase />
-        <Process />
         <About />
+        <ProductShowcase />
+        <CustomizationCapabilities />
+        <Process />
+        <ManufacturingProof />
+        <FlagshipProduct />
         <Contact />
       </main>
       <Footer />

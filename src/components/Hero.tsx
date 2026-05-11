@@ -35,16 +35,14 @@ export default function Hero() {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=150%",
-        pin: true,
-        scrub: 1.2,
-        anticipatePin: 1,
+        end: "bottom top",
+        scrub: 0.8,
       },
     });
 
-    tl.to(textRef.current, { opacity: 0, y: -40, duration: 0.4 }, 0)
-      .to(imageRef.current, { rotateY: 25, y: 120, scale: 0.75, opacity: 0, duration: 1, ease: "power2.inOut" }, 0)
-      .to(scrollRef.current, { opacity: 0, duration: 0.2 }, 0);
+    tl.to(textRef.current, { opacity: 0, y: -30, duration: 1 }, 0)
+      .to(imageRef.current, { y: 80, scale: 0.9, opacity: 0, duration: 1 }, 0)
+      .to(scrollRef.current, { opacity: 0, duration: 0.3 }, 0);
 
     return () => {
       ScrollTrigger.getAll().forEach((st) => {
@@ -143,7 +141,7 @@ export default function Hero() {
               fontWeight: 900,
               lineHeight: 0.92,
               color: "#F5F0E8",
-              fontSize: "clamp(48px, 6.5vw, 88px)",
+              fontSize: "clamp(40px, 5.5vw, 72px)",
               margin: 0,
             }}
           >
@@ -197,7 +195,7 @@ export default function Hero() {
           transition={{ duration: 1.1, ease: EASE, delay: 0.3 }}
           style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "center", perspective: 1000 }}
         >
-          <div style={{ position: "relative", width: "100%", maxWidth: 480, margin: "0 auto" }}>
+          <div style={{ position: "relative", width: "100%", maxWidth: 380, margin: "0 auto" }}>
             {/* glow */}
             <div
               style={{
