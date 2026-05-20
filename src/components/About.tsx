@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
+const G = "#C9913A";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const credentials = [
@@ -128,10 +128,10 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      style={{ width: "100%", background: "#111111", padding: "96px 0 112px", position: "relative" }}
+      style={{ width: "100%", background: "#221E19", padding: "96px 0 112px", position: "relative" }}
     >
       {/* Animated gold top line */}
-      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(200,16,46,0.15) 30%, rgba(200,16,46,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
+      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(201,145,58,0.15) 30%, rgba(201,145,58,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
 
       <style>{`@media(min-width:768px){.about-grid{grid-template-columns:1fr 1fr!important}} @media(min-width:640px){.cred-grid{grid-template-columns:repeat(3,1fr)!important}}`}</style>
       <div className="about-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr", gap: 64, alignItems: "start" }}>
@@ -165,7 +165,7 @@ export default function About() {
             <p style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.2em", color: G, fontFamily: "var(--font-dm-sans)", fontWeight: 600, margin: 0 }}>
               Who we are
             </p>
-            <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", lineHeight: 1.05, fontSize: "clamp(32px, 4vw, 52px)", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", lineHeight: 1.05, fontSize: "clamp(32px, 4vw, 52px)", margin: 0 }}>
               We make one thing.<br />We make it well.
             </h2>
           </div>
@@ -180,7 +180,7 @@ export default function About() {
                   display: "block",
                   fontSize: 16,
                   lineHeight: 1.8,
-                  color: "#4A4A4A",
+                  color: "#8A7E70",
                   fontFamily: "var(--font-dm-sans)",
                   opacity: 0,
                   clipPath: "inset(0 100% 0 0)",
@@ -212,7 +212,7 @@ function CredCard({ cred }: { cred: typeof credentials[0] }) {
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
-        background: "#161616",
+        background: "#2A2520",
         border: "1px solid rgba(255,255,255,0.06)",
         borderTop: `2px solid ${G}`,
         padding: 20,
@@ -224,7 +224,7 @@ function CredCard({ cred }: { cred: typeof credentials[0] }) {
         position: "relative",
         overflow: "hidden",
         transition: "border-color 0.3s, transform 0.25s cubic-bezier(0.16,1,0.3,1)",
-        borderColor: hov ? "rgba(200,16,46,0.15)" : "rgba(255,255,255,0.06)",
+        borderColor: hov ? "rgba(201,145,58,0.15)" : "rgba(255,255,255,0.06)",
         transform: hov ? "translateY(-4px)" : "translateY(0)",
       }}
     >
@@ -232,15 +232,15 @@ function CredCard({ cred }: { cred: typeof credentials[0] }) {
       <motion.div
         animate={{ opacity: hov ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 0%, rgba(200,16,46,0.06) 0%, transparent 70%)", pointerEvents: "none" }}
+        style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 0%, rgba(201,145,58,0.06) 0%, transparent 70%)", pointerEvents: "none" }}
       />
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         {cred.icon}
-        <h4 style={{ fontSize: 14, fontWeight: 600, color: "#F5F0E8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+        <h4 style={{ fontSize: 14, fontWeight: 600, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
           {cred.title}
         </h4>
       </div>
-      <p style={{ fontSize: 12, lineHeight: 1.7, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+      <p style={{ fontSize: 12, lineHeight: 1.7, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
         {cred.body}
       </p>
     </div>

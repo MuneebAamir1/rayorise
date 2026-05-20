@@ -6,8 +6,8 @@ import { motion, useInView } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const products = [
@@ -53,13 +53,13 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
         position: "relative",
         display: "flex",
         flexDirection: "column",
-        background: "#111111",
+        background: "#221E19",
         border: "1px solid rgba(255,255,255,0.06)",
         overflow: "hidden",
         cursor: "pointer",
         opacity: 0,
         transition: "border-color 0.3s ease",
-        borderColor: hov ? "rgba(200,16,46,0.2)" : "rgba(255,255,255,0.06)",
+        borderColor: hov ? "rgba(201,145,58,0.2)" : "rgba(255,255,255,0.06)",
       }}
     >
       {/* Gold bottom border — scale in on hover */}
@@ -80,7 +80,7 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
       </motion.div>
 
       {/* Image */}
-      <div style={{ position: "relative", overflow: "hidden", height: 288, background: "#161616" }}>
+      <div style={{ position: "relative", overflow: "hidden", height: 288, background: "#2A2520" }}>
         <motion.div
           animate={{ scale: hov ? 1.06 : 1 }}
           transition={{ duration: 0.5, ease: EASE }}
@@ -100,7 +100,7 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
           position: "absolute", top: 16, left: 16,
           width: 32, height: 32,
           display: "flex", alignItems: "center", justifyContent: "center",
-          border: `1px solid rgba(200,16,46,0.4)`,
+          border: `1px solid rgba(201,145,58,0.4)`,
           background: "rgba(10,10,10,0.7)",
           backdropFilter: "blur(8px)",
           color: G,
@@ -121,13 +121,13 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
 
       {/* Content */}
       <div style={{ padding: "24px 24px 20px", display: "flex", flexDirection: "column", gap: 12, flex: 1 }}>
-        <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: 28, margin: 0 }}>
+        <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: 28, margin: 0 }}>
           {product.name}
         </h3>
         <p style={{ fontSize: 13, fontWeight: 600, color: G, fontFamily: "var(--font-dm-sans)", margin: 0 }}>
           {product.tagline}
         </p>
-        <p style={{ fontSize: 13, lineHeight: 1.7, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+        <p style={{ fontSize: 13, lineHeight: 1.7, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
           {product.desc}
         </p>
 
@@ -139,14 +139,14 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
               style={{
                 padding: "5px 12px",
                 fontSize: 11,
-                background: "#161616",
+                background: "#2A2520",
                 border: "1px solid rgba(255,255,255,0.06)",
-                color: "#4A4A4A",
+                color: "#8A7E70",
                 fontFamily: "var(--font-dm-sans)",
                 transition: "border-color 0.2s, color 0.2s",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(200,16,46,0.3)"; e.currentTarget.style.color = "#C8C5BC"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)"; e.currentTarget.style.color = "#4A4A4A"; }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = "rgba(201,145,58,0.3)"; e.currentTarget.style.color = "#C8BFA8"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.06)"; e.currentTarget.style.color = "#8A7E70"; }}
             >
               {f}
             </span>
@@ -231,10 +231,10 @@ export default function ProductShowcase() {
     <section
       ref={sectionRef}
       id="products"
-      style={{ width: "100%", background: "#0D0D0D", padding: "96px 0 112px", position: "relative" }}
+      style={{ width: "100%", background: "#1A1612", padding: "96px 0 112px", position: "relative" }}
     >
       {/* Gold top line */}
-      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(200,16,46,0.15) 30%, rgba(200,16,46,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
+      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(201,145,58,0.15) 30%, rgba(201,145,58,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
 
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px" }}>
         {/* Header */}
@@ -242,7 +242,7 @@ export default function ProductShowcase() {
           <p style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.2em", color: G, fontFamily: "var(--font-dm-sans)", marginBottom: 16, fontWeight: 600 }}>
             What we make
           </p>
-          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: "clamp(32px, 5vw, 56px)", margin: 0, lineHeight: 1.05 }}>
+          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: "clamp(32px, 5vw, 56px)", margin: 0, lineHeight: 1.05 }}>
             Three products. Perfected.
           </h2>
         </div>

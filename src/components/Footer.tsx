@@ -6,8 +6,8 @@ import Image from "next/image";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const navLinks = [
@@ -28,7 +28,7 @@ function FooterLink({ href, label }: { href: string; label: string }) {
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
-        fontSize: 13, color: hov ? "#F5F0E8" : "#4A4A4A", fontFamily: "var(--font-dm-sans)",
+        fontSize: 13, color: hov ? "#F0E8D8" : "#8A7E70", fontFamily: "var(--font-dm-sans)",
         textDecoration: "none", position: "relative", display: "inline-block",
         transition: "color 0.2s", cursor: "pointer", width: "fit-content",
       }}
@@ -53,7 +53,7 @@ function FooterCTA() {
       onMouseLeave={() => setHov(false)}
       animate={{
         backgroundColor: hov ? G : "transparent",
-        borderColor: hov ? G : "rgba(200,16,46,0.5)",
+        borderColor: hov ? G : "rgba(201,145,58,0.5)",
         scale: hov ? 1.03 : 1,
       }}
       whileTap={{ scale: 0.96 }}
@@ -70,11 +70,11 @@ function FooterCTA() {
         style={{ position: "absolute", top: 0, left: 0, width: "40%", height: "100%", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)", transform: "skewX(-20deg)", pointerEvents: "none" }}
       />
       <motion.span
-        animate={{ backgroundColor: hov ? "#0D0D0D" : G, boxShadow: hov ? "none" : `0 0 6px rgba(200,16,46,0.2)` }}
+        animate={{ backgroundColor: hov ? "#1A1612" : G, boxShadow: hov ? "none" : `0 0 6px rgba(201,145,58,0.2)` }}
         style={{ width: 5, height: 5, borderRadius: "50%", flexShrink: 0 }}
       />
       <motion.span
-        animate={{ color: hov ? "#0D0D0D" : G }}
+        animate={{ color: hov ? "#1A1612" : G }}
         style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, fontFamily: "var(--font-dm-sans)" }}
       >
         Request Sample
@@ -121,7 +121,7 @@ export default function Footer() {
   }, { scope: footerRef });
 
   return (
-    <footer ref={footerRef} style={{ width: "100%", background: "#111111", position: "relative" }}>
+    <footer ref={footerRef} style={{ width: "100%", background: "#221E19", position: "relative" }}>
       {/* Gold top border — animated */}
       <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent 5%, ${G} 35%, ${GL} 50%, ${G} 65%, transparent 95%)`, transformOrigin: "left", transform: "scaleX(0)" }} />
 
@@ -143,15 +143,15 @@ export default function Footer() {
               RayoRise
             </span>
           </div>
-          <p style={{ fontSize: 13, lineHeight: 1.7, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", maxWidth: 260, margin: 0 }}>
+          <p style={{ fontSize: 13, lineHeight: 1.7, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", maxWidth: 260, margin: 0 }}>
             Specialist B2B tracksuit manufacturer. Serving UK streetwear brands since day one.
           </p>
           {/* Social hint */}
           <div style={{ display: "flex", gap: 12, marginTop: 4 }}>
             {["Instagram", "LinkedIn"].map((s) => (
-              <a key={s} href="#" style={{ fontSize: 12, color: "#3A3A3A", fontFamily: "var(--font-dm-sans)", textDecoration: "none", transition: "color 0.2s", cursor: "pointer" }}
+              <a key={s} href="#" style={{ fontSize: 12, color: "#6A5F54", fontFamily: "var(--font-dm-sans)", textDecoration: "none", transition: "color 0.2s", cursor: "pointer" }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = G; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = "#3A3A3A"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = "#6A5F54"; }}
               >
                 {s}
               </a>
@@ -186,15 +186,15 @@ export default function Footer() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", textDecoration: "none", transition: "color 0.2s" }}
-                onMouseEnter={(e) => { e.currentTarget.style.color = "#F5F0E8"; }}
-                onMouseLeave={(e) => { e.currentTarget.style.color = "#4A4A4A"; }}
+                style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", textDecoration: "none", transition: "color 0.2s" }}
+                onMouseEnter={(e) => { e.currentTarget.style.color = "#F0E8D8"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = "#8A7E70"; }}
               >
                 <span style={{ fontSize: 12 }}>{item.icon}</span>
                 {item.text}
               </a>
             ))}
-            <p style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+            <p style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 13, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
               <span style={{ fontSize: 12 }}>📍</span>
               United Kingdom
             </p>
@@ -207,10 +207,10 @@ export default function Footer() {
       <div data-bottom="" style={{ borderTop: "1px solid rgba(255,255,255,0.04)", opacity: 0 }}>
         <style>{`@media(min-width:768px){.footer-bottom{flex-direction:row!important}}`}</style>
         <div className="footer-bottom" style={{ maxWidth: 1280, margin: "0 auto", padding: "20px 32px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-          <p style={{ fontSize: 12, color: "#3A3A3A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+          <p style={{ fontSize: 12, color: "#6A5F54", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
             © {new Date().getFullYear()} RayoRise. All rights reserved.
           </p>
-          <p style={{ fontSize: 12, color: "#3A3A3A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+          <p style={{ fontSize: 12, color: "#6A5F54", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
             Specialist B2B tracksuit manufacturer · United Kingdom
           </p>
         </div>

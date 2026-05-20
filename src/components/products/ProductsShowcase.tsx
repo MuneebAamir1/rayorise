@@ -6,8 +6,8 @@ import Link from "next/link";
 import { ProductHighlightCard } from "@/components/ui/product-card";
 import { Shirt, Wind, Scissors, ArrowRight, Sparkles, Shield, Truck } from "lucide-react";
 
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 
 /* ── Product data ── */
 const PRODUCTS = [
@@ -58,8 +58,8 @@ function FeatureRow({ features }: { features: string[] }) {
     <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 16 }}>
       {features.map((f) => (
         <span key={f} style={{
-          fontSize: 11, padding: "6px 12px", background: "rgba(200,16,46,0.08)",
-          border: "1px solid rgba(200,16,46,0.15)", color: "#ccc",
+          fontSize: 11, padding: "6px 12px", background: "rgba(201,145,58,0.08)",
+          border: "1px solid rgba(201,145,58,0.15)", color: "#ccc",
           fontFamily: "var(--font-dm-sans)", letterSpacing: "0.02em",
         }}>
           {f}
@@ -124,11 +124,11 @@ function ProductDetail({ product, index }: { product: typeof PRODUCTS[0]; index:
             </span>
           </div>
 
-          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: "clamp(32px, 4vw, 48px)", color: "#F5F0E8", lineHeight: 1.1, margin: 0 }}>
+          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: "clamp(32px, 4vw, 48px)", color: "#F0E8D8", lineHeight: 1.1, margin: 0 }}>
             {product.title}
           </h2>
 
-          <p style={{ fontSize: 15, lineHeight: 1.7, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", maxWidth: 480, margin: 0 }}>
+          <p style={{ fontSize: 15, lineHeight: 1.7, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", maxWidth: 480, margin: 0 }}>
             {product.description}
           </p>
 
@@ -138,11 +138,11 @@ function ProductDetail({ product, index }: { product: typeof PRODUCTS[0]; index:
           <div style={{ display: "flex", gap: 32, marginTop: 8 }}>
             <div>
               <p style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.12em", color: "#666", fontFamily: "var(--font-dm-sans)", margin: "0 0 4px" }}>MOQ</p>
-              <p style={{ fontSize: 16, fontWeight: 700, color: "#F5F0E8", fontFamily: "var(--font-barlow-condensed)", margin: 0 }}>{product.moq}</p>
+              <p style={{ fontSize: 16, fontWeight: 700, color: "#F0E8D8", fontFamily: "var(--font-barlow-condensed)", margin: 0 }}>{product.moq}</p>
             </div>
             <div>
               <p style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.12em", color: "#666", fontFamily: "var(--font-dm-sans)", margin: "0 0 4px" }}>Sampling</p>
-              <p style={{ fontSize: 16, fontWeight: 700, color: "#F5F0E8", fontFamily: "var(--font-barlow-condensed)", margin: 0 }}>{product.sampling}</p>
+              <p style={{ fontSize: 16, fontWeight: 700, color: "#F0E8D8", fontFamily: "var(--font-barlow-condensed)", margin: 0 }}>{product.sampling}</p>
             </div>
           </div>
 
@@ -152,7 +152,7 @@ function ProductDetail({ product, index }: { product: typeof PRODUCTS[0]; index:
               href="/customize"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px",
-                background: G, color: "#0D0D0D", fontSize: 13, fontWeight: 700,
+                background: G, color: "#1A1612", fontSize: 13, fontWeight: 700,
                 fontFamily: "var(--font-dm-sans)", textDecoration: "none", letterSpacing: "0.04em",
                 transition: "background 0.2s",
               }}
@@ -163,7 +163,7 @@ function ProductDetail({ product, index }: { product: typeof PRODUCTS[0]; index:
               href="/#contact"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 8, padding: "12px 24px",
-                background: "none", border: `1.5px solid rgba(200,16,46,0.4)`, color: G,
+                background: "none", border: `1.5px solid rgba(201,145,58,0.4)`, color: G,
                 fontSize: 13, fontWeight: 600, fontFamily: "var(--font-dm-sans)", textDecoration: "none",
                 transition: "border-color 0.2s",
               }}
@@ -185,7 +185,7 @@ export default function ProductsShowcase() {
   const heroInView = useInView(heroRef, { once: true, amount: 0.2 });
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0D0D0D", color: "#F5F0E8" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1612", color: "#F0E8D8" }}>
       {/* ── Top bar ── */}
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(10,10,10,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -194,9 +194,9 @@ export default function ProductsShowcase() {
               RayoRise
             </span>
             <span style={{ width: 1, height: 16, background: "rgba(255,255,255,0.1)" }} />
-            <span style={{ fontSize: 12, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", letterSpacing: "0.06em" }}>PRODUCTS</span>
+            <span style={{ fontSize: 12, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", letterSpacing: "0.06em" }}>PRODUCTS</span>
           </Link>
-          <Link href="/" style={{ fontSize: 12, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>
+          <Link href="/" style={{ fontSize: 12, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", textDecoration: "none" }}>
             ← Back to Home
           </Link>
         </div>
@@ -221,7 +221,7 @@ export default function ProductsShowcase() {
             <h1 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: "clamp(36px, 5vw, 60px)", lineHeight: 1.05, margin: "0 0 16px" }}>
               Engineered for<br />streetwear excellence.
             </h1>
-            <p style={{ fontSize: 15, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", maxWidth: 520, margin: "0 auto" }}>
+            <p style={{ fontSize: 15, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", maxWidth: 520, margin: "0 auto" }}>
               Three product categories. Infinite customisation. Every piece built to your exact specification.
             </p>
           </motion.div>
@@ -262,8 +262,8 @@ export default function ProductsShowcase() {
             <div key={t.label} style={{ display: "flex", alignItems: "center", gap: 12 }}>
               <div style={{ color: G }}>{t.icon}</div>
               <div>
-                <p style={{ fontSize: 13, fontWeight: 600, color: "#F5F0E8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{t.label}</p>
-                <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{t.desc}</p>
+                <p style={{ fontSize: 13, fontWeight: 600, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{t.label}</p>
+                <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{t.desc}</p>
               </div>
             </div>
           ))}
@@ -288,7 +288,7 @@ export default function ProductsShowcase() {
           <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: "clamp(28px, 4vw, 44px)", margin: "0 0 16px" }}>
             Ready to build your line?
           </h2>
-          <p style={{ fontSize: 14, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", maxWidth: 420, margin: "0 auto 32px" }}>
+          <p style={{ fontSize: 14, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", maxWidth: 420, margin: "0 auto 32px" }}>
             From concept to delivery — we handle every detail so you can focus on your brand.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
@@ -296,7 +296,7 @@ export default function ProductsShowcase() {
               href="/customize"
               style={{
                 display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 32px",
-                background: G, color: "#0D0D0D", fontSize: 14, fontWeight: 700,
+                background: G, color: "#1A1612", fontSize: 14, fontWeight: 700,
                 fontFamily: "var(--font-dm-sans)", textDecoration: "none",
               }}
             >
@@ -318,7 +318,7 @@ export default function ProductsShowcase() {
 
       {/* ── Footer bar ── */}
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.04)", padding: "20px 32px", textAlign: "center" }}>
-        <p style={{ fontSize: 12, color: "#3A3A3A", fontFamily: "var(--font-dm-sans)" }}>
+        <p style={{ fontSize: 12, color: "#6A5F54", fontFamily: "var(--font-dm-sans)" }}>
           © {new Date().getFullYear()} RayoRise · Specialist B2B Tracksuit Manufacturer · United Kingdom
         </p>
       </div>

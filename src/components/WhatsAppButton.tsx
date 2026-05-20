@@ -65,7 +65,7 @@ export default function WhatsAppButton() {
                 <p className="text-[12px] font-semibold text-[#E8E6DF] whitespace-nowrap" style={{ fontFamily: "var(--font-dm-sans)" }}>
                   Chat with us on WhatsApp
                 </p>
-                <p className="text-[10px] text-[#3A3A3A] mt-0.5 whitespace-nowrap" style={{ fontFamily: "var(--font-dm-sans)" }}>
+                <p className="text-[10px] text-[#6A5F54] mt-0.5 whitespace-nowrap" style={{ fontFamily: "var(--font-dm-sans)" }}>
                   Fast B2B enquiries · 90s football culture 🏴󠁧󠁢󠁥󠁮󠁧󠁿
                 </p>
               </div>

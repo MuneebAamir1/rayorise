@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function TrackSuitSVG({ baseColor, secondaryColor, accentColor, goldDetails, design }: Props) {
-  const gold = "#C8102E";
+  const gold = "#C9913A";
 
   /* Design-specific stripe widths */
   const stripeW = design === "bold" ? 28 : design === "retro" ? 12 : design === "minimal" ? 0 : 18;

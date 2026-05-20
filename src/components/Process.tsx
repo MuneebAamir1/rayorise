@@ -5,8 +5,8 @@ import { motion, useInView } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const steps = [
@@ -72,9 +72,9 @@ function ProcessStep({ step }: { step: typeof steps[0] }) {
         <motion.div
           animate={{
             borderColor: hov ? GL : G,
-            backgroundColor: hov ? "rgba(200,16,46,0.1)" : "#0D0D0D",
+            backgroundColor: hov ? "rgba(201,145,58,0.1)" : "#1A1612",
             scale: hov ? 1.05 : 1,
-            boxShadow: hov ? `0 0 20px rgba(200,16,46,0.2)` : "none"
+            boxShadow: hov ? `0 0 20px rgba(201,145,58,0.2)` : "none"
           }}
           transition={{ duration: 0.3 }}
           style={{
@@ -93,10 +93,10 @@ function ProcessStep({ step }: { step: typeof steps[0] }) {
       </motion.div>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-        <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: 22, margin: 0 }}>
+        <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: 22, margin: 0 }}>
           {step.title}
         </h3>
-        <p style={{ fontSize: 14, lineHeight: 1.6, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0, maxWidth: 260 }}>
+        <p style={{ fontSize: 14, lineHeight: 1.6, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0, maxWidth: 260 }}>
           {step.desc}
         </p>
       </div>
@@ -184,10 +184,10 @@ export default function Process() {
     <section
       ref={sectionRef}
       id="process"
-      style={{ width: "100%", background: "#0D0D0D", padding: "112px 0", position: "relative", minHeight: "100svh", display: "flex", flexDirection: "column", justifyContent: "center" }}
+      style={{ width: "100%", background: "#1A1612", padding: "112px 0", position: "relative", minHeight: "100svh", display: "flex", flexDirection: "column", justifyContent: "center" }}
     >
       {/* Gold top line */}
-      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(200,16,46,0.15) 30%, rgba(200,16,46,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
+      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(201,145,58,0.15) 30%, rgba(201,145,58,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
 
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", width: "100%", position: "relative", zIndex: 10 }}>
         {/* Header */}
@@ -195,7 +195,7 @@ export default function Process() {
           <p data-header="" style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.2em", color: G, fontFamily: "var(--font-dm-sans)", marginBottom: 16, fontWeight: 600, opacity: 0 }}>
             How it works
           </p>
-          <h2 data-header="" style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", lineHeight: 1.05, fontSize: "clamp(32px, 5vw, 56px)", margin: 0, opacity: 0 }}>
+          <h2 data-header="" style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", lineHeight: 1.05, fontSize: "clamp(32px, 5vw, 56px)", margin: 0, opacity: 0 }}>
             From brief to delivery.
           </h2>
         </div>
@@ -215,7 +215,7 @@ export default function Process() {
           <div className="process-connector" style={{ position: "absolute", top: 28, left: "12%", right: "12%", height: 1, zIndex: 0 }}>
             <div
               data-connector=""
-              style={{ width: "100%", height: "100%", background: "rgba(200,16,46,0.3)", transformOrigin: "left", transform: "scaleX(0)" }}
+              style={{ width: "100%", height: "100%", background: "rgba(201,145,58,0.3)", transformOrigin: "left", transform: "scaleX(0)" }}
             />
             {/* Traveling dot */}
             <motion.div

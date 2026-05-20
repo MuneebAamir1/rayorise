@@ -7,8 +7,8 @@ import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 
 /* stagger container + child variants */
 const containerV = {
@@ -72,7 +72,7 @@ export default function Hero() {
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
-        background: "#0D0D0D",
+        background: "#1A1612",
       }}
     >
       {/* Radial glow */}
@@ -84,7 +84,7 @@ export default function Hero() {
           width: 700,
           height: 700,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(200,16,46,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(201,145,58,0.06) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -125,8 +125,8 @@ export default function Hero() {
                 color: G,
                 fontFamily: "var(--font-dm-sans)",
                 padding: "6px 16px",
-                border: `1px solid rgba(200,16,46,0.25)`,
-                background: "rgba(200,16,46,0.05)",
+                border: `1px solid rgba(201,145,58,0.25)`,
+                background: "rgba(201,145,58,0.05)",
               }}
             >
               UK B2B Tracksuit Manufacturer
@@ -140,7 +140,7 @@ export default function Hero() {
               fontFamily: "var(--font-barlow-condensed)",
               fontWeight: 900,
               lineHeight: 0.92,
-              color: "#F5F0E8",
+              color: "#F0E8D8",
               fontSize: "clamp(40px, 5.5vw, 72px)",
               margin: 0,
             }}
@@ -166,7 +166,7 @@ export default function Hero() {
             style={{
               fontSize: 17,
               fontWeight: 500,
-              color: "#C8C5BC",
+              color: "#C8BFA8",
               fontFamily: "var(--font-dm-sans)",
               margin: 0,
               lineHeight: 1.6,
@@ -202,7 +202,7 @@ export default function Hero() {
                 position: "absolute",
                 inset: -20,
                 borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(200,16,46,0.12) 0%, transparent 70%)",
+                background: "radial-gradient(circle, rgba(201,145,58,0.12) 0%, transparent 70%)",
                 filter: "blur(40px)",
                 pointerEvents: "none",
               }}
@@ -219,7 +219,7 @@ export default function Hero() {
                 width: "100%",
                 height: "auto",
                 objectFit: "contain",
-                filter: "drop-shadow(0 40px 80px rgba(200,16,46,0.1))",
+                filter: "drop-shadow(0 40px 80px rgba(201,145,58,0.1))",
               }}
             />
 
@@ -232,13 +232,13 @@ export default function Hero() {
                 position: "absolute",
                 top: 32,
                 left: -12,
-                background: "#111111",
-                border: "1px solid rgba(200,16,46,0.25)",
+                background: "#221E19",
+                border: "1px solid rgba(201,145,58,0.25)",
                 padding: "10px 16px",
                 zIndex: 20,
               }}
             >
-              <p style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.18em", color: "#4A4A4A", margin: 0, fontFamily: "var(--font-dm-sans)" }}>MOQ From</p>
+              <p style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.18em", color: "#8A7E70", margin: 0, fontFamily: "var(--font-dm-sans)" }}>MOQ From</p>
               <p style={{ fontSize: 22, fontWeight: 900, color: G, margin: 0, fontFamily: "var(--font-barlow-condensed)" }}>50 Units</p>
             </motion.div>
 
@@ -251,13 +251,13 @@ export default function Hero() {
                 position: "absolute",
                 bottom: 48,
                 right: -12,
-                background: "#111111",
-                border: "1px solid rgba(200,16,46,0.25)",
+                background: "#221E19",
+                border: "1px solid rgba(201,145,58,0.25)",
                 padding: "10px 16px",
                 zIndex: 20,
               }}
             >
-              <p style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.18em", color: "#4A4A4A", margin: 0, fontFamily: "var(--font-dm-sans)" }}>Sampling In</p>
+              <p style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.18em", color: "#8A7E70", margin: 0, fontFamily: "var(--font-dm-sans)" }}>Sampling In</p>
               <p style={{ fontSize: 22, fontWeight: 900, color: G, margin: 0, fontFamily: "var(--font-barlow-condensed)" }}>7–10 Days</p>
             </motion.div>
           </div>
@@ -266,8 +266,8 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div ref={scrollRef} style={{ position: "absolute", bottom: 32, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-        <span style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.2em", color: "#4A4A4A", fontFamily: "var(--font-dm-sans)" }}>Scroll</span>
-        <div style={{ position: "relative", width: 1, height: 48, background: "rgba(200,16,46,0.2)", overflow: "hidden" }}>
+        <span style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.2em", color: "#8A7E70", fontFamily: "var(--font-dm-sans)" }}>Scroll</span>
+        <div style={{ position: "relative", width: 1, height: 48, background: "rgba(201,145,58,0.2)", overflow: "hidden" }}>
           <motion.div animate={{ y: [0, 48, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 16, background: G }} />
         </div>
       </div>
@@ -286,8 +286,8 @@ function HeroCTA({ href, label, primary = false }: { href: string; label: string
       animate={{
         backgroundColor: primary
           ? (hovered ? GL : G)
-          : (hovered ? "rgba(200,16,46,0.1)" : "transparent"),
-        borderColor: primary ? (hovered ? GL : G) : (hovered ? G : "rgba(200,16,46,0.5)"),
+          : (hovered ? "rgba(201,145,58,0.1)" : "transparent"),
+        borderColor: primary ? (hovered ? GL : G) : (hovered ? G : "rgba(201,145,58,0.5)"),
         scale: hovered ? 1.03 : 1,
       }}
       whileTap={{ scale: 0.96 }}
@@ -306,7 +306,7 @@ function HeroCTA({ href, label, primary = false }: { href: string; label: string
         fontSize: 14,
         fontWeight: 600,
         letterSpacing: "0.04em",
-        color: primary ? "#0D0D0D" : G,
+        color: primary ? "#1A1612" : G,
       }}
     >
       {/* shimmer */}
@@ -321,7 +321,7 @@ function HeroCTA({ href, label, primary = false }: { href: string; label: string
           height: "100%",
           background: primary
             ? "linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent)"
-            : "linear-gradient(90deg, transparent, rgba(200,16,46,0.2), transparent)",
+            : "linear-gradient(90deg, transparent, rgba(201,145,58,0.2), transparent)",
           transform: "skewX(-20deg)",
           pointerEvents: "none",
         }}

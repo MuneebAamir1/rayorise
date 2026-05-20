@@ -5,9 +5,9 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 import Image from "next/image";
 
 /* ─── tokens ─── */
-const G = "#C8102E";
-const GL = "#E63946";
-const GD = "rgba(200,16,46,0.22)";
+const G = "#C9913A";
+const GL = "#DBAA55";
+const GD = "rgba(201,145,58,0.22)";
 
 const NAV = [
   { l: "Home", h: "#hero" },
@@ -22,7 +22,7 @@ const PRODS = [
 
 /* ─── responsive hook: true = desktop ─── */
 function useIsDesktop(bp = 1024) {
-  const [desk, setDesk] = useState(true);
+  const [desk, setDesk] = useState(false);
   useEffect(() => {
     const check = () => setDesk(window.innerWidth >= bp);
     check();
@@ -83,7 +83,7 @@ function GoldButton({ href, label = "Request Sample", full = false }: { href: st
       onMouseLeave={() => setHov(false)}
       animate={{
         backgroundColor: hov ? G : "transparent",
-        borderColor: hov ? G : "rgba(200,16,46,0.5)",
+        borderColor: hov ? G : "rgba(201,145,58,0.5)",
         scale: hov ? 1.03 : 1,
       }}
       whileTap={{ scale: 0.96 }}
@@ -110,11 +110,11 @@ function GoldButton({ href, label = "Request Sample", full = false }: { href: st
         style={{ position: "absolute", top: 0, left: 0, width: "40%", height: "100%", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)", transform: "skewX(-20deg)", pointerEvents: "none" }}
       />
       <motion.span
-        animate={{ backgroundColor: hov ? "#0D0D0D" : G, boxShadow: hov ? "none" : `0 0 8px ${GD}` }}
+        animate={{ backgroundColor: hov ? "#1A1612" : G, boxShadow: hov ? "none" : `0 0 8px ${GD}` }}
         style={{ width: 5, height: 5, borderRadius: "50%", flexShrink: 0 }}
       />
       <motion.span
-        animate={{ color: hov ? "#0D0D0D" : G }}
+        animate={{ color: hov ? "#1A1612" : G }}
         style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" as const, fontFamily: "var(--font-dm-sans)", whiteSpace: "nowrap" as const }}
       >
         {label}
@@ -141,8 +141,8 @@ function ProductsDropdown({ open, onClose }: { open: boolean; onClose: () => voi
             marginTop: 12,
             width: 250,
             zIndex: 100,
-            background: "#0C0C0C",
-            border: "1px solid rgba(200,16,46,0.2)",
+            background: "#1A1612",
+            border: "1px solid rgba(201,145,58,0.2)",
             borderTop: `2px solid ${G}`,
             boxShadow: "0 24px 80px rgba(0,0,0,0.9)",
           }}
@@ -166,7 +166,7 @@ function ProductsDropdown({ open, onClose }: { open: boolean; onClose: () => voi
                 transition: "background 0.15s",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "rgba(200,16,46,0.06)";
+                e.currentTarget.style.background = "rgba(201,145,58,0.06)";
                 const bar = e.currentTarget.querySelector<HTMLElement>("[data-bar]");
                 if (bar) bar.style.transform = "scaleY(1)";
                 const lbl = e.currentTarget.querySelector<HTMLElement>("[data-lbl]");
@@ -239,7 +239,7 @@ export default function Navbar() {
           <motion.div whileHover={{ scale: 1.08, rotate: 3 }} transition={{ type: "spring", stiffness: 400, damping: 16 }} style={{ position: "relative", width: 42, height: 42 }}>
             <Image src="/images/ray-logo.png" alt="RayoRise" fill style={{ objectFit: "contain" }} sizes="42px" priority />
           </motion.div>
-          <span style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: 24, background: `linear-gradient(130deg, ${G}, ${GL}, #A00D24)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>RayoRise</span>
+          <span style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: 24, background: `linear-gradient(130deg, ${G}, ${GL}, #A07828)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>RayoRise</span>
         </a>
 
         {/* DESKTOP NAV — only render when isDesktop */}
@@ -293,16 +293,16 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            style={{ overflow: "hidden", background: "rgba(5,5,5,0.98)", backdropFilter: "blur(24px)", borderBottom: `1px solid rgba(200,16,46,0.2)` }}
+            style={{ overflow: "hidden", background: "rgba(5,5,5,0.98)", backdropFilter: "blur(24px)", borderBottom: `1px solid rgba(201,145,58,0.2)` }}
           >
             <div style={{ padding: "20px 28px 28px" }}>
               <p style={{ fontSize: 10, textTransform: "uppercase", letterSpacing: "0.18em", color: G, marginBottom: 12, fontFamily: "var(--font-dm-sans)", fontWeight: 700 }}>Products</p>
               {PRODS.map((p, i) => (
-                <motion.a key={p.l} href={p.h} onClick={() => setMobOpen(false)} initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} style={{ display: "block", padding: "10px 16px", fontSize: 14, color: "#4A4A4A", borderLeft: `2px solid rgba(200,16,46,0.2)`, marginBottom: 4, textDecoration: "none", fontFamily: "var(--font-dm-sans)" }}>{p.l}</motion.a>
+                <motion.a key={p.l} href={p.h} onClick={() => setMobOpen(false)} initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: i * 0.05 }} style={{ display: "block", padding: "10px 16px", fontSize: 14, color: "#8A7E70", borderLeft: `2px solid rgba(201,145,58,0.2)`, marginBottom: 4, textDecoration: "none", fontFamily: "var(--font-dm-sans)" }}>{p.l}</motion.a>
               ))}
               <div style={{ height: 1, background: "rgba(255,255,255,0.05)", margin: "16px 0" }} />
               {NAV.map((n, i) => (
-                <motion.a key={n.l} href={n.h} onClick={() => setMobOpen(false)} initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 + i * 0.05 }} style={{ display: "block", padding: "12px 0", fontSize: 15, color: "#4A4A4A", borderBottom: "1px solid rgba(255,255,255,0.04)", textDecoration: "none", fontFamily: "var(--font-dm-sans)" }}>{n.l}</motion.a>
+                <motion.a key={n.l} href={n.h} onClick={() => setMobOpen(false)} initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 + i * 0.05 }} style={{ display: "block", padding: "12px 0", fontSize: 15, color: "#8A7E70", borderBottom: "1px solid rgba(255,255,255,0.04)", textDecoration: "none", fontFamily: "var(--font-dm-sans)" }}>{n.l}</motion.a>
               ))}
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} style={{ marginTop: 20 }}>
                 <GoldButton href="#contact" label="Request Sample" full />

@@ -6,7 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
+const G = "#C9913A";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const images = [
@@ -89,7 +89,7 @@ export default function ManufacturingProof() {
     <section
       ref={sectionRef}
       id="manufacturing"
-      style={{ width: "100%", background: "#0D0D0D", padding: "96px 0", position: "relative" }}
+      style={{ width: "100%", background: "#1A1612", padding: "96px 0", position: "relative" }}
     >
       {/* Gold top border — animated */}
       <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, ${G} 30%, ${G} 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
@@ -137,7 +137,7 @@ export default function ManufacturingProof() {
               {/* Label */}
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, padding: "8px 14px", background: "linear-gradient(to top, rgba(0,0,0,0.85), transparent)", transform: "translateY(100%)", transition: "transform 0.3s cubic-bezier(0.16,1,0.3,1)", pointerEvents: "none" }} className="img-label">
                 <p style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.14em", color: G, fontFamily: "var(--font-dm-sans)", margin: 0 }}>{img.label}</p>
-                <p style={{ fontSize: 12, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: "2px 0 0" }}>{img.sublabel}</p>
+                <p style={{ fontSize: 12, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: "2px 0 0" }}>{img.sublabel}</p>
               </div>
 
               <style>{`
@@ -155,7 +155,7 @@ export default function ManufacturingProof() {
             <p style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.2em", color: G, fontFamily: "var(--font-dm-sans)", marginBottom: 16, fontWeight: 600 }}>
               What this means for your order
             </p>
-            <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", lineHeight: 1.05, fontSize: "clamp(28px, 4vw, 44px)", margin: 0 }}>
+            <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", lineHeight: 1.05, fontSize: "clamp(28px, 4vw, 44px)", margin: 0 }}>
               Built in a real factory.<br />No shortcuts.
             </h2>
           </div>
@@ -175,17 +175,17 @@ export default function ManufacturingProof() {
                   cursor: "default",
                   transition: "background 0.2s",
                 }}
-                onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(200,16,46,0.03)"; e.currentTarget.style.paddingLeft = "8px"; }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(201,145,58,0.03)"; e.currentTarget.style.paddingLeft = "8px"; }}
                 onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.paddingLeft = "0"; }}
               >
                 {/* Animated check icon */}
                 <svg style={{ width: 20, height: 20, marginTop: 2, flexShrink: 0 }} viewBox="0 0 20 20" fill="none">
-                  <circle cx="10" cy="10" r="9" stroke="rgba(200,16,46,0.3)" strokeWidth="1" />
+                  <circle cx="10" cy="10" r="9" stroke="rgba(201,145,58,0.3)" strokeWidth="1" />
                   <path d="M6 10l2.5 2.5L14 8" stroke={G} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
                 <div>
-                  <p style={{ fontSize: 14, fontWeight: 600, color: "#F5F0E8", margin: "0 0 4px", fontFamily: "var(--font-dm-sans)" }}>{spec.title}</p>
-                  <p style={{ fontSize: 13, lineHeight: 1.6, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{spec.desc}</p>
+                  <p style={{ fontSize: 14, fontWeight: 600, color: "#F0E8D8", margin: "0 0 4px", fontFamily: "var(--font-dm-sans)" }}>{spec.title}</p>
+                  <p style={{ fontSize: 13, lineHeight: 1.6, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{spec.desc}</p>
                 </div>
               </div>
             ))}

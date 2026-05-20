@@ -6,8 +6,8 @@ import { motion, useInView } from "framer-motion";
 import { gsap } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 
 const specs = [
   { title: "Fabric", value: "280gsm French Terry / Tricot" },
@@ -34,7 +34,7 @@ function FlagshipCTA({ href, label }: { href: string; label: string }) {
       animate={{
         backgroundColor: hov ? GL : G,
         scale: hov ? 1.04 : 1,
-        boxShadow: hov ? `0 8px 32px rgba(200,16,46,0.3)` : `0 4px 16px rgba(200,16,46,0.15)`,
+        boxShadow: hov ? `0 8px 32px rgba(201,145,58,0.3)` : `0 4px 16px rgba(201,145,58,0.15)`,
       }}
       whileTap={{ scale: 0.96 }}
       transition={{ duration: 0.22 }}
@@ -45,7 +45,7 @@ function FlagshipCTA({ href, label }: { href: string; label: string }) {
         padding: "16px 40px",
         textDecoration: "none",
         cursor: "pointer",
-        color: "#0D0D0D",
+        color: "#1A1612",
         fontSize: 15,
         fontWeight: 600,
         letterSpacing: "0.04em",
@@ -111,7 +111,7 @@ export default function FlagshipProduct() {
     <section
       ref={sectionRef}
       id="flagship"
-      style={{ background: "#0D0D0D", overflow: "hidden" }}
+      style={{ background: "#1A1612", overflow: "hidden" }}
     >
       <style>{`
         .flagship-hero-grid { grid-template-columns: 1fr; text-align: center; }
@@ -146,7 +146,7 @@ export default function FlagshipProduct() {
                 alt="Retro panel tracksuit — flagship product"
                 width={700}
                 height={850}
-                style={{ width: "100%", height: "auto", objectFit: "contain", filter: "drop-shadow(0 60px 120px rgba(200,16,46,0.10))" }}
+                style={{ width: "100%", height: "auto", objectFit: "contain", filter: "drop-shadow(0 60px 120px rgba(201,145,58,0.10))" }}
               />
             </div>
           </RevealBlock>
@@ -154,11 +154,11 @@ export default function FlagshipProduct() {
           {/* Title + intro */}
           <RevealBlock delay={0.15}>
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-              <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: "clamp(36px, 5vw, 64px)", margin: 0, lineHeight: 1.05 }}>
+              <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: "clamp(36px, 5vw, 64px)", margin: 0, lineHeight: 1.05 }}>
                 Retro Panel<br />Tracksuit
               </h2>
               <div style={{ width: 48, height: 3, background: G }} />
-              <p style={{ fontSize: 15, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", maxWidth: 420, lineHeight: 1.7, margin: 0 }}>
+              <p style={{ fontSize: 15, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", maxWidth: 420, lineHeight: 1.7, margin: 0 }}>
                 Our signature two-piece set engineered for streetwear brands rooted in 90s football heritage. Every panel, stitch, and colourway is yours to define.
               </p>
             </div>
@@ -167,14 +167,14 @@ export default function FlagshipProduct() {
       </div>
 
       {/* ── BLOCK 2: Specs panel ── */}
-      <div style={{ background: "#111111", borderTop: "1px solid rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+      <div style={{ background: "#221E19", borderTop: "1px solid rgba(255,255,255,0.04)", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "64px 24px" }}>
           <div className="flagship-specs-grid" style={{ display: "grid", gap: 48, alignItems: "start" }}>
             <RevealBlock>
-              <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: "clamp(28px, 4vw, 48px)", margin: 0 }}>
+              <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: "clamp(28px, 4vw, 48px)", margin: 0 }}>
                 Built to Spec
               </h2>
-              <p style={{ fontSize: 14, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", maxWidth: 400, marginTop: 12, lineHeight: 1.6 }}>
+              <p style={{ fontSize: 14, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", maxWidth: 400, marginTop: 12, lineHeight: 1.6 }}>
                 Premium construction meets total customisation. Every specification tuned to your brand&apos;s exact requirements.
               </p>
             </RevealBlock>
@@ -192,8 +192,8 @@ export default function FlagshipProduct() {
                     opacity: 0,
                   }}
                 >
-                  <span style={{ fontSize: 13, fontWeight: 500, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)" }}>{spec.title}</span>
-                  <span style={{ fontSize: 14, color: "#F5F0E8", fontFamily: "var(--font-dm-sans)", textAlign: "right", maxWidth: "60%" }}>{spec.value}</span>
+                  <span style={{ fontSize: 13, fontWeight: 500, color: "#8A7E70", fontFamily: "var(--font-dm-sans)" }}>{spec.title}</span>
+                  <span style={{ fontSize: 14, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", textAlign: "right", maxWidth: "60%" }}>{spec.value}</span>
                 </div>
               ))}
             </div>
@@ -204,7 +204,7 @@ export default function FlagshipProduct() {
       {/* ── BLOCK 3: Detail shots ── */}
       <div style={{ maxWidth: 1024, margin: "0 auto", padding: "64px 24px" }}>
         <RevealBlock>
-          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", textAlign: "center", marginBottom: 32, fontSize: "clamp(28px, 4vw, 48px)" }}>
+          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", textAlign: "center", marginBottom: 32, fontSize: "clamp(28px, 4vw, 48px)" }}>
             Every Detail, Considered
           </h2>
         </RevealBlock>
@@ -236,10 +236,10 @@ export default function FlagshipProduct() {
           <p style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.2em", color: G, fontFamily: "var(--font-dm-sans)" }}>
             Ready to order?
           </p>
-          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: "clamp(32px, 5vw, 64px)", margin: 0, lineHeight: 1.05 }}>
+          <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: "clamp(32px, 5vw, 64px)", margin: 0, lineHeight: 1.05 }}>
             Request a Sample<br />of This Product
           </h2>
-          <p style={{ fontSize: 15, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", maxWidth: 420 }}>
+          <p style={{ fontSize: 15, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", maxWidth: 420 }}>
             We&apos;ll have a physical sample in your hands within 7–10 days.
           </p>
           <FlagshipCTA href="#contact" label="Request Sample →" />

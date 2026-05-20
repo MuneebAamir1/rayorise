@@ -2,13 +2,13 @@
 
 @theme inline {
   /* Brand Colors */
-  --color-brand-bg: #0D0D0D;
-  --color-brand-surface1: #111111;
-  --color-brand-surface2: #161616;
-  --color-brand-white: #F5F0E8;
-  --color-brand-muted: #4A4A4A;
-  --color-brand-accent: #C8102E;
-  --color-brand-accent-dim: rgba(200, 16, 46, 0.15);
+  --color-brand-bg: #1A1612;
+  --color-brand-surface1: #221E19;
+  --color-brand-surface2: #2A2520;
+  --color-brand-white: #F0E8D8;
+  --color-brand-muted: #8A7E70;
+  --color-brand-accent: #C9913A;
+  --color-brand-accent-dim: rgba(201, 145, 58, 0.15);
   --color-brand-blue: #2A6EDB;
   --color-brand-stripe: rgba(255, 255, 255, 0.025);
   --color-brand-border: rgba(255, 255, 255, 0.06);
@@ -22,8 +22,8 @@
 }
 
 :root {
-  --background: #0D0D0D;
-  --foreground: #F5F0E8;
+  --background: #1A1612;
+  --foreground: #F0E8D8;
 }
 
 *,
@@ -41,8 +41,8 @@ html {
 }
 
 body {
-  background-color: #0D0D0D;
-  color: #F5F0E8;
+  background-color: #1A1612;
+  color: #F0E8D8;
   font-family: var(--font-dm-sans, 'DM Sans', sans-serif);
   overflow-x: hidden;
 }
@@ -60,7 +60,7 @@ body {
 
 /* Gold gradient text */
 .gold-text {
-  background: linear-gradient(135deg, #C8102E 0%, #E63946 50%, #C8102E 100%);
+  background: linear-gradient(135deg, #C9913A 0%, #DBAA55 50%, #C9913A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -100,17 +100,17 @@ body {
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: #0D0D0D; }
-::-webkit-scrollbar-thumb { background: #C8102E; border-radius: 2px; }
+::-webkit-scrollbar-track { background: #1A1612; }
+::-webkit-scrollbar-thumb { background: #C9913A; border-radius: 2px; }
 
 /* Selection */
 ::selection {
-  background: rgba(200, 16, 46, 0.3);
-  color: #F5F0E8;
+  background: rgba(201, 145, 58, 0.3);
+  color: #F0E8D8;
 }
 
 /* Focus ring */
 :focus-visible {
-  outline: 2px solid #C8102E;
+  outline: 2px solid #C9913A;
   outline-offset: 2px;
 }

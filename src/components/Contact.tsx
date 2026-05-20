@@ -5,8 +5,8 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 function WhatsAppIcon() {
@@ -30,7 +30,7 @@ function FormField({ label, name, type = "text", value, onChange, placeholder, r
       <label style={{
         position: "absolute", left: 16, top: active ? 6 : 16,
         fontSize: active ? 9 : 11, textTransform: "uppercase", letterSpacing: "0.14em",
-        color: focused ? G : "#3A3A3A", fontFamily: "var(--font-dm-sans)",
+        color: focused ? G : "#6A5F54", fontFamily: "var(--font-dm-sans)",
         transition: "all 0.2s cubic-bezier(0.16,1,0.3,1)", pointerEvents: "none", zIndex: 2,
       }}>
         {label}
@@ -46,11 +46,11 @@ function FormField({ label, name, type = "text", value, onChange, placeholder, r
         placeholder={focused ? placeholder : ""}
         style={{
           width: "100%", padding: active ? "22px 16px 10px" : "16px",
-          background: "#161616", border: "1px solid", fontSize: 14, color: "#F5F0E8",
+          background: "#2A2520", border: "1px solid", fontSize: 14, color: "#F0E8D8",
           fontFamily: "var(--font-dm-sans)", outline: "none",
           borderColor: focused ? G : "rgba(255,255,255,0.06)",
           transition: "border-color 0.25s, padding 0.2s, box-shadow 0.25s",
-          boxShadow: focused ? `0 0 0 1px rgba(200,16,46,0.15), 0 4px 16px rgba(200,16,46,0.05)` : "none",
+          boxShadow: focused ? `0 0 0 1px rgba(201,145,58,0.15), 0 4px 16px rgba(201,145,58,0.05)` : "none",
         }}
       />
     </div>
@@ -102,15 +102,15 @@ function SubmitButton({ submitting }: { submitting: boolean }) {
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       animate={{
-        backgroundColor: submitting ? "rgba(200,16,46,0.5)" : hov ? GL : G,
+        backgroundColor: submitting ? "rgba(201,145,58,0.5)" : hov ? GL : G,
         scale: hov && !submitting ? 1.02 : 1,
-        boxShadow: hov && !submitting ? `0 8px 32px rgba(200,16,46,0.25)` : `0 2px 8px rgba(200,16,46,0.1)`,
+        boxShadow: hov && !submitting ? `0 8px 32px rgba(201,145,58,0.25)` : `0 2px 8px rgba(201,145,58,0.1)`,
       }}
       whileTap={{ scale: 0.97 }}
       transition={{ duration: 0.2 }}
       style={{
         width: "100%", padding: "16px 0", border: "none", cursor: submitting ? "not-allowed" : "pointer",
-        fontSize: 14, fontWeight: 700, letterSpacing: "0.06em", color: "#0D0D0D",
+        fontSize: 14, fontWeight: 700, letterSpacing: "0.06em", color: "#1A1612",
         fontFamily: "var(--font-dm-sans)", position: "relative", overflow: "hidden",
         opacity: submitting ? 0.7 : 1,
       }}
@@ -195,10 +195,10 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      style={{ width: "100%", background: "#0D0D0D", padding: "96px 0 112px", position: "relative" }}
+      style={{ width: "100%", background: "#1A1612", padding: "96px 0 112px", position: "relative" }}
     >
       {/* Gold top line */}
-      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(200,16,46,0.15) 30%, rgba(200,16,46,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
+      <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(201,145,58,0.15) 30%, rgba(201,145,58,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
 
       <style>{`@media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr!important}}`}</style>
       <div className="contact-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr", gap: 64, alignItems: "start" }}>
@@ -209,7 +209,7 @@ export default function Contact() {
             <p style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.2em", color: G, fontFamily: "var(--font-dm-sans)", marginBottom: 16, fontWeight: 600 }}>
               Start your order
             </p>
-            <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", lineHeight: 1.05, fontSize: "clamp(32px, 5vw, 56px)", margin: "0 0 28px" }}>
+            <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", lineHeight: 1.05, fontSize: "clamp(32px, 5vw, 56px)", margin: "0 0 28px" }}>
               Ready to build your brand&apos;s tracksuit?
             </h2>
 
@@ -225,9 +225,9 @@ export default function Contact() {
                   data-spec-item=""
                   style={{ display: "flex", alignItems: "center", gap: 12, opacity: 0 }}
                 >
-                  <span style={{ width: 6, height: 6, borderRadius: "50%", background: G, flexShrink: 0, boxShadow: `0 0 8px rgba(200,16,46,0.3)` }} />
-                  <span style={{ fontSize: 14, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)" }}>
-                    <strong style={{ color: "#F5F0E8" }}>{item.label}:</strong>{" "}{item.value}
+                  <span style={{ width: 6, height: 6, borderRadius: "50%", background: G, flexShrink: 0, boxShadow: `0 0 8px rgba(201,145,58,0.3)` }} />
+                  <span style={{ fontSize: 14, color: "#8A7E70", fontFamily: "var(--font-dm-sans)" }}>
+                    <strong style={{ color: "#F0E8D8" }}>{item.label}:</strong>{" "}{item.value}
                   </span>
                 </div>
               ))}
@@ -236,11 +236,11 @@ export default function Contact() {
 
           {/* WhatsApp CTA */}
           <div>
-            <p style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.14em", color: "#4A4A4A", marginBottom: 12, fontFamily: "var(--font-dm-sans)" }}>
+            <p style={{ fontSize: 12, textTransform: "uppercase", letterSpacing: "0.14em", color: "#8A7E70", marginBottom: 12, fontFamily: "var(--font-dm-sans)" }}>
               Or chat directly
             </p>
             <WhatsAppCTA />
-            <p style={{ fontSize: 11, marginTop: 12, color: "#3A3A3A", fontFamily: "var(--font-dm-sans)" }}>
+            <p style={{ fontSize: 11, marginTop: 12, color: "#6A5F54", fontFamily: "var(--font-dm-sans)" }}>
               Typically responds within 2 hours during business hours
             </p>
           </div>
@@ -249,7 +249,7 @@ export default function Contact() {
         {/* RIGHT — Form */}
         <div data-right-col="" style={{ opacity: 0 }}>
           <div style={{
-            background: "#111111", border: "1px solid rgba(255,255,255,0.06)", padding: 32,
+            background: "#221E19", border: "1px solid rgba(255,255,255,0.06)", padding: 32,
             position: "relative", overflow: "hidden",
           }}>
             {/* Gold top accent */}
@@ -265,7 +265,7 @@ export default function Contact() {
                   transition={{ duration: 0.3 }}
                   style={{ display: "flex", flexDirection: "column", gap: 20 }}
                 >
-                  <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: 24, margin: "0 0 4px" }}>
+                  <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: 24, margin: "0 0 4px" }}>
                     Send Inquiry
                   </h3>
 
@@ -277,7 +277,7 @@ export default function Contact() {
                     <label style={{
                       position: "absolute", left: 16, top: selectFocused || form.product ? 6 : 16,
                       fontSize: selectFocused || form.product ? 9 : 11, textTransform: "uppercase", letterSpacing: "0.14em",
-                      color: selectFocused ? G : "#3A3A3A", fontFamily: "var(--font-dm-sans)",
+                      color: selectFocused ? G : "#6A5F54", fontFamily: "var(--font-dm-sans)",
                       transition: "all 0.2s", pointerEvents: "none", zIndex: 2,
                     }}>
                       Product Interest
@@ -291,11 +291,11 @@ export default function Contact() {
                       onBlur={() => setSelectFocused(false)}
                       style={{
                         width: "100%", padding: selectFocused || form.product ? "22px 16px 10px" : "16px",
-                        background: "#161616", border: "1px solid", fontSize: 14, color: form.product ? "#F5F0E8" : "#3A3A3A",
+                        background: "#2A2520", border: "1px solid", fontSize: 14, color: form.product ? "#F0E8D8" : "#6A5F54",
                         fontFamily: "var(--font-dm-sans)", outline: "none", cursor: "pointer",
                         borderColor: selectFocused ? G : "rgba(255,255,255,0.06)",
                         transition: "border-color 0.25s, padding 0.2s, box-shadow 0.25s",
-                        boxShadow: selectFocused ? `0 0 0 1px rgba(200,16,46,0.15)` : "none",
+                        boxShadow: selectFocused ? `0 0 0 1px rgba(201,145,58,0.15)` : "none",
                         WebkitAppearance: "none",
                         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M3 4.5l3 3 3-3' stroke='%23888880' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`,
                         backgroundRepeat: "no-repeat",
@@ -316,7 +316,7 @@ export default function Contact() {
                     <label style={{
                       position: "absolute", left: 16, top: textareaFocused || form.description ? 6 : 16,
                       fontSize: textareaFocused || form.description ? 9 : 11, textTransform: "uppercase", letterSpacing: "0.14em",
-                      color: textareaFocused ? G : "#3A3A3A", fontFamily: "var(--font-dm-sans)",
+                      color: textareaFocused ? G : "#6A5F54", fontFamily: "var(--font-dm-sans)",
                       transition: "all 0.2s", pointerEvents: "none", zIndex: 2,
                     }}>
                       Brief Design Description
@@ -332,11 +332,11 @@ export default function Contact() {
                       rows={4}
                       style={{
                         width: "100%", padding: textareaFocused || form.description ? "22px 16px 10px" : "16px",
-                        background: "#161616", border: "1px solid", fontSize: 14, color: "#F5F0E8",
+                        background: "#2A2520", border: "1px solid", fontSize: 14, color: "#F0E8D8",
                         fontFamily: "var(--font-dm-sans)", outline: "none", resize: "none",
                         borderColor: textareaFocused ? G : "rgba(255,255,255,0.06)",
                         transition: "border-color 0.25s, padding 0.2s, box-shadow 0.25s",
-                        boxShadow: textareaFocused ? `0 0 0 1px rgba(200,16,46,0.15)` : "none",
+                        boxShadow: textareaFocused ? `0 0 0 1px rgba(201,145,58,0.15)` : "none",
                       }}
                     />
                   </div>
@@ -349,7 +349,7 @@ export default function Contact() {
                       <circle cx="12" cy="12" r="10" strokeWidth="1.5" />
                       <path d="M12 7v5l3 3" strokeLinecap="round" strokeWidth="1.5" />
                     </svg>
-                    <span style={{ fontSize: 12, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)" }}>
+                    <span style={{ fontSize: 12, color: "#8A7E70", fontFamily: "var(--font-dm-sans)" }}>
                       We respond within 24 hours
                     </span>
                   </div>
@@ -372,17 +372,17 @@ export default function Contact() {
                     <motion.div
                       animate={{ opacity: [0.3, 0.6, 0.3] }}
                       transition={{ repeat: Infinity, duration: 2 }}
-                      style={{ position: "absolute", inset: -8, borderRadius: "50%", border: `1px solid rgba(200,16,46,0.2)` }}
+                      style={{ position: "absolute", inset: -8, borderRadius: "50%", border: `1px solid rgba(201,145,58,0.2)` }}
                     />
                     <svg style={{ width: 32, height: 32 }} fill="none" viewBox="0 0 24 24" stroke={G} strokeWidth="1.5">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                   </motion.div>
                   <div>
-                    <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F5F0E8", fontSize: 32, margin: "0 0 8px" }}>
+                    <h3 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, color: "#F0E8D8", fontSize: 32, margin: "0 0 8px" }}>
                       Inquiry Sent
                     </h3>
-                    <p style={{ fontSize: 14, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+                    <p style={{ fontSize: 14, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
                       We&apos;ll review your brief and respond within 24 hours.
                     </p>
                   </div>

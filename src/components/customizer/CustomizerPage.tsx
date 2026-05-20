@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import TrackSuitSVG from "./TrackSuitSVG";
 
-const G = "#C8102E";
-const GL = "#E63946";
+const G = "#C9913A";
+const GL = "#DBAA55";
 
 /* ── Types ── */
 interface LogoConfig {
@@ -27,8 +27,8 @@ interface Config {
 }
 
 const defaultConfig: Config = {
-  baseColor: "#0D0D0D",
-  secondaryColor: "#F5F0E8",
+  baseColor: "#1A1612",
+  secondaryColor: "#F0E8D8",
   accentColor: "#1E4D8C",
   goldDetails: true,
   design: "classic",
@@ -38,25 +38,25 @@ const defaultConfig: Config = {
 };
 
 const BASE_COLORS = [
-  { label: "Black", hex: "#0D0D0D" },
+  { label: "Black", hex: "#1A1612" },
   { label: "Navy", hex: "#1B2838" },
   { label: "Charcoal", hex: "#2D2D2D" },
   { label: "Forest", hex: "#1A2E1A" },
   { label: "Burgundy", hex: "#4A0E1E" },
-  { label: "White", hex: "#F5F0E8" },
+  { label: "White", hex: "#F0E8D8" },
 ];
 const SECONDARY_COLORS = [
-  { label: "White", hex: "#F5F0E8" },
+  { label: "White", hex: "#F0E8D8" },
   { label: "Light Grey", hex: "#C0C0C0" },
   { label: "Cream", hex: "#E8E0D0" },
-  { label: "Gold", hex: "#C8102E" },
-  { label: "Black", hex: "#0D0D0D" },
+  { label: "Gold", hex: "#C9913A" },
+  { label: "Black", hex: "#1A1612" },
 ];
 const ACCENT_COLORS = [
   { label: "Blue", hex: "#1E4D8C" },
   { label: "Red", hex: "#C41E3A" },
-  { label: "Gold", hex: "#C8102E" },
-  { label: "White", hex: "#F5F0E8" },
+  { label: "Gold", hex: "#C9913A" },
+  { label: "White", hex: "#F0E8D8" },
   { label: "Emerald", hex: "#2E6B4A" },
 ];
 const DESIGNS: { id: Config["design"]; label: string; desc: string }[] = [
@@ -87,7 +87,7 @@ function Section({ title, defaultOpen = false, children }: { title: string; defa
         onClick={() => setOpen(!open)}
         style={{
           width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
-          padding: "18px 0", background: "none", border: "none", cursor: "pointer", color: "#F5F0E8",
+          padding: "18px 0", background: "none", border: "none", cursor: "pointer", color: "#F0E8D8",
         }}
       >
         <span style={{ fontSize: 13, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", fontFamily: "var(--font-dm-sans)" }}>
@@ -180,7 +180,7 @@ export default function CustomizerPage() {
     const ctx = canvas.getContext("2d")!;
     const img = new Image();
     img.onload = () => {
-      ctx.fillStyle = "#0D0D0D";
+      ctx.fillStyle = "#1A1612";
       ctx.fillRect(0, 0, 720, 1640);
       ctx.drawImage(img, 0, 0, 720, 1640);
       /* Draw logo if present */
@@ -218,7 +218,7 @@ export default function CustomizerPage() {
   const logoPos = LOGO_POS_MAP[config.logo.position];
 
   return (
-    <div style={{ minHeight: "100vh", background: "#0D0D0D", color: "#F5F0E8" }}>
+    <div style={{ minHeight: "100vh", background: "#1A1612", color: "#F0E8D8" }}>
       {/* Top bar */}
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: "rgba(10,10,10,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth: 1440, margin: "0 auto", padding: "14px 32px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -227,9 +227,9 @@ export default function CustomizerPage() {
               RayoRise
             </span>
             <span style={{ width: 1, height: 16, background: "rgba(255,255,255,0.1)" }} />
-            <span style={{ fontSize: 12, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", letterSpacing: "0.06em" }}>CUSTOMIZER</span>
+            <span style={{ fontSize: 12, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", letterSpacing: "0.06em" }}>CUSTOMIZER</span>
           </Link>
-          <Link href="/" style={{ fontSize: 12, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", textDecoration: "none", transition: "color 0.2s" }}>
+          <Link href="/" style={{ fontSize: 12, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", textDecoration: "none", transition: "color 0.2s" }}>
             ← Back to Home
           </Link>
         </div>
@@ -281,7 +281,7 @@ export default function CustomizerPage() {
           {/* Fabric indicator */}
           <div style={{ marginTop: 20, display: "flex", alignItems: "center", gap: 8 }}>
             <span style={{ width: 8, height: 8, borderRadius: "50%", background: G }} />
-            <span style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+            <span style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
               {FABRICS.find((f) => f.id === config.fabric)?.label} · Size {config.size}
             </span>
           </div>
@@ -292,12 +292,12 @@ export default function CustomizerPage() {
           .cust-panel { width: 100%; border-top: 1px solid rgba(255,255,255,0.06); border-left: none; }
           @media(min-width: 900px) { .cust-panel { width: 420px !important; max-width: 420px !important; border-left: 1px solid rgba(255,255,255,0.06) !important; border-top: none !important; } }
         `}</style>
-        <div className="cust-panel" style={{ background: "#111111", overflowY: "auto", padding: "0 28px" }}>
+        <div className="cust-panel" style={{ background: "#221E19", overflowY: "auto", padding: "0 28px" }}>
           <div style={{ padding: "28px 0 8px" }}>
-            <h1 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: 28, margin: "0 0 4px", color: "#F5F0E8" }}>
+            <h1 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: 28, margin: "0 0 4px", color: "#F0E8D8" }}>
               Design Your Tracksuit
             </h1>
-            <p style={{ fontSize: 13, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+            <p style={{ fontSize: 13, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
               90&apos;s vintage · Fully customisable
             </p>
           </div>
@@ -306,19 +306,19 @@ export default function CustomizerPage() {
           <Section title="Colours" defaultOpen>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               <div>
-                <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Base Colour</p>
+                <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Base Colour</p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   {BASE_COLORS.map((c) => <Swatch key={c.hex} hex={c.hex} label={c.label} active={config.baseColor === c.hex} onClick={() => set("baseColor", c.hex)} />)}
                 </div>
               </div>
               <div>
-                <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Panel / Stripe</p>
+                <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Panel / Stripe</p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   {SECONDARY_COLORS.map((c) => <Swatch key={c.hex} hex={c.hex} label={c.label} active={config.secondaryColor === c.hex} onClick={() => set("secondaryColor", c.hex)} />)}
                 </div>
               </div>
               <div>
-                <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Accent Line</p>
+                <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Accent Line</p>
                 <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
                   {ACCENT_COLORS.map((c) => <Swatch key={c.hex} hex={c.hex} label={c.label} active={config.accentColor === c.hex} onClick={() => set("accentColor", c.hex)} />)}
                 </div>
@@ -351,13 +351,13 @@ export default function CustomizerPage() {
                   key={d.id}
                   onClick={() => set("design", d.id)}
                   style={{
-                    padding: 14, background: config.design === d.id ? "rgba(200,16,46,0.1)" : "#1a1a1a",
+                    padding: 14, background: config.design === d.id ? "rgba(201,145,58,0.1)" : "#2A2520",
                     border: `1.5px solid ${config.design === d.id ? G : "rgba(255,255,255,0.06)"}`,
                     cursor: "pointer", textAlign: "left", transition: "all 0.2s",
                   }}
                 >
-                  <p style={{ fontSize: 13, fontWeight: 700, color: "#F5F0E8", fontFamily: "var(--font-dm-sans)", margin: "0 0 4px" }}>{d.label}</p>
-                  <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{d.desc}</p>
+                  <p style={{ fontSize: 13, fontWeight: 700, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: "0 0 4px" }}>{d.label}</p>
+                  <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{d.desc}</p>
                 </button>
               ))}
             </div>
@@ -370,13 +370,13 @@ export default function CustomizerPage() {
                 onClick={() => fileInputRef.current?.click()}
                 style={{
                   border: "2px dashed rgba(255,255,255,0.1)", padding: 28, textAlign: "center", cursor: "pointer",
-                  transition: "border-color 0.2s", background: "#1a1a1a",
+                  transition: "border-color 0.2s", background: "#2A2520",
                 }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = G; }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)"; }}
               >
                 <input ref={fileInputRef} type="file" accept="image/png,image/svg+xml,image/jpeg" onChange={handleLogoUpload} style={{ display: "none" }} />
-                <p style={{ fontSize: 13, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+                <p style={{ fontSize: 13, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
                   {config.logo.dataUrl ? "✓ Logo uploaded — click to replace" : "Click or drag to upload PNG / SVG"}
                 </p>
               </div>
@@ -385,7 +385,7 @@ export default function CustomizerPage() {
                 <>
                   {/* Position */}
                   <div>
-                    <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Placement</p>
+                    <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: "0 0 10px", textTransform: "uppercase", letterSpacing: "0.08em" }}>Placement</p>
                     <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                       {LOGO_POSITIONS.map((p) => (
                         <button
@@ -393,8 +393,8 @@ export default function CustomizerPage() {
                           onClick={() => setLogo("position", p.id)}
                           style={{
                             padding: "8px 14px", fontSize: 12, fontFamily: "var(--font-dm-sans)",
-                            background: config.logo.position === p.id ? G : "#1a1a1a",
-                            color: config.logo.position === p.id ? "#0D0D0D" : "#ccc",
+                            background: config.logo.position === p.id ? G : "#2A2520",
+                            color: config.logo.position === p.id ? "#1A1612" : "#ccc",
                             border: `1px solid ${config.logo.position === p.id ? G : "rgba(255,255,255,0.08)"}`,
                             cursor: "pointer", fontWeight: 600, transition: "all 0.2s",
                           }}
@@ -406,7 +406,7 @@ export default function CustomizerPage() {
                   </div>
                   {/* Scale */}
                   <div>
-                    <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: "0 0 8px", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                    <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: "0 0 8px", textTransform: "uppercase", letterSpacing: "0.08em" }}>
                       Scale: {Math.round(config.logo.scale * 100)}%
                     </p>
                     <input
@@ -436,14 +436,14 @@ export default function CustomizerPage() {
                   onClick={() => set("fabric", f.id)}
                   style={{
                     padding: "12px 16px", display: "flex", justifyContent: "space-between", alignItems: "center",
-                    background: config.fabric === f.id ? "rgba(200,16,46,0.08)" : "#1a1a1a",
+                    background: config.fabric === f.id ? "rgba(201,145,58,0.08)" : "#2A2520",
                     border: `1.5px solid ${config.fabric === f.id ? G : "rgba(255,255,255,0.06)"}`,
                     cursor: "pointer", transition: "all 0.2s",
                   }}
                 >
                   <div style={{ textAlign: "left" }}>
-                    <p style={{ fontSize: 13, fontWeight: 600, color: "#F5F0E8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{f.label}</p>
-                    <p style={{ fontSize: 11, color: "#4A4A4A", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{f.desc}</p>
+                    <p style={{ fontSize: 13, fontWeight: 600, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{f.label}</p>
+                    <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{f.desc}</p>
                   </div>
                   {config.fabric === f.id && <span style={{ color: G, fontSize: 16 }}>✓</span>}
                 </button>
@@ -461,8 +461,8 @@ export default function CustomizerPage() {
                   style={{
                     width: 48, height: 48, display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: 14, fontWeight: 700, fontFamily: "var(--font-dm-sans)",
-                    background: config.size === s ? G : "#1a1a1a",
-                    color: config.size === s ? "#0D0D0D" : "#ccc",
+                    background: config.size === s ? G : "#2A2520",
+                    color: config.size === s ? "#1A1612" : "#ccc",
                     border: `1.5px solid ${config.size === s ? G : "rgba(255,255,255,0.06)"}`,
                     cursor: "pointer", transition: "all 0.2s",
                   }}
@@ -481,7 +481,7 @@ export default function CustomizerPage() {
               whileTap={{ scale: 0.97 }}
               style={{
                 width: "100%", padding: "16px 0", background: cartAdded ? "#25D366" : G, border: "none", cursor: "pointer",
-                fontSize: 14, fontWeight: 700, letterSpacing: "0.06em", color: "#0D0D0D",
+                fontSize: 14, fontWeight: 700, letterSpacing: "0.06em", color: "#1A1612",
                 fontFamily: "var(--font-dm-sans)", transition: "background 0.3s",
               }}
             >
@@ -505,7 +505,7 @@ export default function CustomizerPage() {
               onClick={resetDesign}
               style={{
                 width: "100%", padding: "12px 0", background: "none", border: "none", cursor: "pointer",
-                fontSize: 12, color: "#3A3A3A", fontFamily: "var(--font-dm-sans)", textDecoration: "underline",
+                fontSize: 12, color: "#6A5F54", fontFamily: "var(--font-dm-sans)", textDecoration: "underline",
               }}
             >
               Reset all customizations

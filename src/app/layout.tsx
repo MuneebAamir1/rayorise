@@ -40,7 +40,7 @@ export default function RootLayout({
       lang="en"
       className={`${barlowCondensed.variable} ${dmSans.variable}`}
     >
-      <body className="min-h-screen bg-[#0D0D0D] text-[#F5F0E8] antialiased overflow-x-hidden">
+      <body className="min-h-screen bg-[#1A1612] text-[#F0E8D8] antialiased overflow-x-hidden">
         {children}
       </body>
     </html>

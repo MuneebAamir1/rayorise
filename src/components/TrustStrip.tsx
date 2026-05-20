@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
-const G = "#C8102E";
+const G = "#C9913A";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const stats = [
@@ -69,7 +69,7 @@ export default function TrustStrip() {
         width: "100%",
         position: "relative",
         overflow: "hidden",
-        background: "#111111",
+        background: "#221E19",
       }}
     >
       {/* Animated gold top border */}
@@ -87,7 +87,7 @@ export default function TrustStrip() {
         }}
       />
       {/* Bottom border */}
-      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(200,16,46,0.15) 30%, rgba(200,16,46,0.15) 70%, transparent)` }} />
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(201,145,58,0.15) 30%, rgba(201,145,58,0.15) 70%, transparent)` }} />
 
       <style>{`@media(min-width:768px){.trust-grid{grid-template-columns:repeat(4,1fr)!important}}`}</style>
       <div className="trust-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 0 }}>
@@ -104,7 +104,7 @@ export default function TrustStrip() {
               justifyContent: "center",
               padding: "36px 16px",
               textAlign: "center",
-              borderRight: i < stats.length - 1 ? "1px solid rgba(200,16,46,0.1)" : "none",
+              borderRight: i < stats.length - 1 ? "1px solid rgba(201,145,58,0.1)" : "none",
               position: "relative",
             }}
           >
@@ -114,7 +114,7 @@ export default function TrustStrip() {
               style={{
                 position: "absolute",
                 inset: 0,
-                background: `radial-gradient(circle, rgba(200,16,46,0.04) 0%, transparent 70%)`,
+                background: `radial-gradient(circle, rgba(201,145,58,0.04) 0%, transparent 70%)`,
                 opacity: 0,
                 transition: "opacity 0.3s",
                 pointerEvents: "none",
@@ -145,7 +145,7 @@ export default function TrustStrip() {
                 fontSize: 11,
                 textTransform: "uppercase",
                 letterSpacing: "0.16em",
-                color: "#4A4A4A",
+                color: "#8A7E70",
                 fontFamily: "var(--font-dm-sans)",
                 fontWeight: 500,
               }}

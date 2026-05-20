@@ -70,19 +70,19 @@ export const ProductHighlightCard = React.forwardRef<
             className="pointer-events-none absolute -inset-px rounded-xl"
             style={{
               opacity: glowOpacity,
-              background: `radial-gradient(80px at ${glowX}% ${glowY}%, #C8102E, transparent 40%)`,
+              background: `radial-gradient(80px at ${glowX}% ${glowY}%, #C9913A, transparent 40%)`,
             }}
           />
 
           <div className="relative z-10 flex h-full flex-col justify-between p-6">
             <div className="flex items-center space-x-2">
               {categoryIcon}
-              <span className="text-sm font-medium" style={{ color: "#C8102E", fontFamily: "var(--font-dm-sans)" }}>{category}</span>
+              <span className="text-sm font-medium" style={{ color: "#C9913A", fontFamily: "var(--font-dm-sans)" }}>{category}</span>
             </div>
 
             <div>
-              <h2 className="text-4xl font-bold" style={{ fontFamily: "var(--font-barlow-condensed)", color: "#F5F0E8" }}>{title}</h2>
-              <p className="mt-2 text-xs max-w-[70%]" style={{ color: "#4A4A4A", fontFamily: "var(--font-dm-sans)" }}>
+              <h2 className="text-4xl font-bold" style={{ fontFamily: "var(--font-barlow-condensed)", color: "#F0E8D8" }}>{title}</h2>
+              <p className="mt-2 text-xs max-w-[70%]" style={{ color: "#8A7E70", fontFamily: "var(--font-dm-sans)" }}>
                 {description}
               </p>
             </div>
