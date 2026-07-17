@@ -10,7 +10,7 @@ const G = "#C9913A";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 interface Section {
-  heading: string;
+  heading: string; 
   content: React.ReactNode;
 }
 
