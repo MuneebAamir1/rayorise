@@ -7,6 +7,9 @@ import CustomizationCapabilities from "@/components/CustomizationCapabilities";
 import Process from "@/components/Process";
 import ManufacturingProof from "@/components/ManufacturingProof";
 import FlagshipProduct from "@/components/FlagshipProduct";
+import BuyerPainPoints from "@/components/BuyerPainPoints";
+import TrustIndicators from "@/components/TrustIndicators";
+
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
@@ -24,6 +27,9 @@ export default function Home() {
         <Process />
         <ManufacturingProof />
         <FlagshipProduct />
+        <BuyerPainPoints />
+        <TrustIndicators />
+
         <Contact />
       </main>
       <Footer />

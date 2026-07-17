@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 
@@ -11,19 +12,19 @@ const GL = "#DBAA55";
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "Products", href: "#products" },
-  { label: "Manufacturing", href: "#manufacturing" },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Products", href: "/products" },
+  { label: "Manufacturing", href: "/#manufacturing" },
+  { label: "Process", href: "/#process" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 /* Footer link with underline reveal */
 function FooterLink({ href, label }: { href: string; label: string }) {
   const [hov, setHov] = useState(false);
   return (
-    <a
+    <Link
       href={href}
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
@@ -39,7 +40,7 @@ function FooterLink({ href, label }: { href: string; label: string }) {
         transition={{ duration: 0.25, ease: EASE }}
         style={{ position: "absolute", bottom: -2, left: 0, width: "100%", height: 1, background: G, transformOrigin: "left" }}
       />
-    </a>
+    </Link>
   );
 }
 
@@ -48,7 +49,7 @@ function FooterCTA() {
   const [hov, setHov] = useState(false);
   return (
     <motion.a
-      href="#contact"
+      href="/#contact"
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       animate={{

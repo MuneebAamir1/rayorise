@@ -181,9 +181,9 @@ export default function Hero() {
             style={{ display: "flex", flexWrap: "wrap", gap: 14, paddingTop: 4 }}
           >
             {/* Primary CTA */}
-            <HeroCTA href="#contact" label="Request Sample" primary />
+            <HeroCTA href="/#contact" label="Request Sample" primary />
             {/* Secondary CTA */}
-            <HeroCTA href="#flagship" label="View Tracksuit" />
+            <HeroCTA href="/products/tracksuits" label="View Tracksuit" />
           </motion.div>
         </motion.div>
 

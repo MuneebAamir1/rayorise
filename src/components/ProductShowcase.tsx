@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 const G = "#C9913A";
 const GL = "#DBAA55";
@@ -155,27 +156,28 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
 
         {/* CTA row */}
         <div style={{ marginTop: "auto", paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-          <motion.a
-            href="#contact"
-            animate={{ gap: hov ? 14 : 8 }}
-            transition={{ duration: 0.25 }}
+          <Link
+            href={`/products/${product.id}`}
+            onMouseEnter={() => setHov(true)}
+            onMouseLeave={() => setHov(false)}
             style={{
               display: "inline-flex",
               alignItems: "center",
-              gap: 8,
+              gap: hov ? 14 : 8,
               fontSize: 13,
               fontWeight: 600,
               color: G,
               fontFamily: "var(--font-dm-sans)",
               textDecoration: "none",
               cursor: "pointer",
+              transition: "gap 0.25s ease",
             }}
           >
-            Request a sample
+            View product details
             <svg style={{ width: 16, height: 16 }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </motion.a>
+          </Link>
         </div>
       </div>
     </motion.div>

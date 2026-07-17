@@ -12,6 +12,9 @@
   --color-brand-blue: #2A6EDB;
   --color-brand-stripe: rgba(255, 255, 255, 0.025);
   --color-brand-border: rgba(255, 255, 255, 0.06);
+  --color-brand-lime: #D4FF2B;
+  --color-brand-signal: #E84D30;
+  --color-brand-steel: #6B7280;
 
   /* Fonts */
   --font-display: var(--font-barlow-condensed);
@@ -24,6 +27,17 @@
 :root {
   --background: #1A1612;
   --foreground: #F0E8D8;
+
+  /* Semantic aliases for component consumption */
+  --bg: var(--color-brand-bg);
+  --surface: var(--color-brand-surface1);
+  --surface-2: var(--color-brand-surface2);
+  --accent: var(--color-brand-accent);
+  --accent-dim: var(--color-brand-accent-dim);
+  --accent-secondary: #DBAA55;
+  --text-primary: var(--color-brand-white);
+  --text-muted: var(--color-brand-muted);
+  --border: var(--color-brand-border);
 }
 
 *,

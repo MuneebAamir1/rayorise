@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 /* ─── tokens ─── */
 const G = "#C9913A";
@@ -10,14 +11,14 @@ const GL = "#DBAA55";
 const GD = "rgba(201,145,58,0.22)";
 
 const NAV = [
-  { l: "Home", h: "#hero" },
-  { l: "About", h: "#about" },
-  { l: "Contact", h: "#contact" },
+  { l: "Home", h: "/" },
+  { l: "About", h: "/about" },
+  { l: "Contact", h: "/#contact" },
 ];
 const PRODS = [
-  { l: "Tracksuits", h: "#products", d: "Full two-piece sets" },
-  { l: "Track Jackets", h: "#products", d: "Retro-cut standalone jacket" },
-  { l: "Track Pants", h: "#products", d: "Custom panel & waistband" },
+  { l: "Tracksuits", h: "/products/tracksuits", d: "Full two-piece sets" },
+  { l: "Track Jackets", h: "/products/track-jackets", d: "Retro-cut standalone jacket" },
+  { l: "Track Pants", h: "/products/track-pants", d: "Custom panel & waistband" },
 ];
 
 /* ─── responsive hook: true = desktop ─── */
@@ -36,7 +37,7 @@ function useIsDesktop(bp = 1024) {
 function NavLink({ href, label, onClick }: { href: string; label: string; onClick?: () => void }) {
   const [hov, setHov] = useState(false);
   return (
-    <a
+    <Link
       href={href}
       onClick={onClick}
       onMouseEnter={() => setHov(true)}
@@ -69,7 +70,7 @@ function NavLink({ href, label, onClick }: { href: string; label: string; onClic
           pointerEvents: "none",
         }}
       />
-    </a>
+    </Link>
   );
 }
 
@@ -265,7 +266,7 @@ export default function Navbar() {
 
         {/* CTA (desktop) + Burger (mobile) */}
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexShrink: 0 }}>
-          {isDesktop && <GoldButton href="#contact" />}
+          {isDesktop && <GoldButton href="/#contact" />}
           {!isDesktop && (
             <button
               onClick={() => setMobOpen((o) => !o)}
@@ -305,7 +306,7 @@ export default function Navbar() {
                 <motion.a key={n.l} href={n.h} onClick={() => setMobOpen(false)} initial={{ opacity: 0, x: -14 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 + i * 0.05 }} style={{ display: "block", padding: "12px 0", fontSize: 15, color: "#8A7E70", borderBottom: "1px solid rgba(255,255,255,0.04)", textDecoration: "none", fontFamily: "var(--font-dm-sans)" }}>{n.l}</motion.a>
               ))}
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} style={{ marginTop: 20 }}>
-                <GoldButton href="#contact" label="Request Sample" full />
+                <GoldButton href="/#contact" label="Request Sample" full />
               </motion.div>
             </div>
           </motion.div>
