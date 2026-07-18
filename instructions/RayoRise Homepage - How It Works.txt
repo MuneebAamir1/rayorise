@@ -1,0 +1,234 @@
+RayoRise Homepage - Section 06: How It Works (Development Deliverable)
+Objective
+This section should clearly explain the complete private-label manufacturing journey at RayoRise.
+
+Instead of showing a simple timeline, it should educate buyers on what happens after they submit an inquiry, helping them understand every stage from product development to final delivery.
+
+The goal is to build trust, reduce buyer uncertainty, and answer common questions before they contact us.
+
+
+Placement
+Place this section directly after Customisation Capabilities. Homepage Order:
+1. Hero
+2. Who We Build For
+3. About RayoRise
+4. What We Make
+5. Customisation Capabilities
+6. How It Works
+7. What This Means For Your Order
+
+
+Keep Existing Design
+Keep the current:
+
+• Timeline layout
+• Numbered steps
+• Dark premium theme
+• Gold accent styling
+• Typography
+• Spacing
+
+Do not redesign the section. Improve the content and interaction.
+
+Section Heading
+Use:
+
+• Small eyebrow heading: HOW IT WORKS
+• H2 explaining the complete manufacturing process.
+
+
+Introduction
+Add a short paragraph explaining that every order follows a structured workflow to ensure clear communication, accurate production, and consistent quality from inquiry to shipment.
+
+
+Interactive Timeline
+Convert the current timeline into an accordion.
+
+Default State
+
+• Show step number
+• Step title
+• Short summary
+
+Expanded State
+When clicked, each step should reveal detailed information.
+
+Only one step should stay open at a time.
+
+
+Manufacturing Workflow
+Step 01 - Submit Your Requirements
+
+Explain that buyers share:
+
+• Product type
+• Reference images
+• Branding requirements
+• Customization details
+• Quantity
+• Target market
+
+This information is used to start the product development process.
+
+Step 02 - Product Consultation
+
+Explain:
+
+• Requirement review
+• Technical consultation
+• Material recommendations
+• Manufacturing feasibility
+• Cost discussion
+
+
+Step 03 - Sampling & Development
+
+Explain:
+
+• Pattern development
+• Sample creation
+• Fit testing
+• Material approval
+• Design refinements
+
+Mention that production begins only after sample approval.
+
+
+Step 04 - Production Approval
+
+Include:
+
+• Final design approval
+• Quantity confirmation
+• Branding approval
+• Color approval
+• Production timeline confirmation
+
+
+Step 05 - Bulk Manufacturing
+
+Explain:
+
+• Fabric preparation
+• Cutting
+• Sewing
+• Branding application
+• Garment assembly
+• Production monitoring
+
+Step 06 - Quality Inspection
+
+Explain quality checks including:
+
+• Measurements
+• Stitching
+• Branding placement
+• Construction
+• Final finishing
+
+Every order should be inspected before shipment.
+
+
+Step 07 - Packing & Worldwide Delivery
+
+Explain:
+
+• Final packing
+• Carton preparation
+• Export documentation
+• Shipment coordination
+• Delivery preparation
+
+Show that orders are securely prepared for international shipping.
+
+
+Expanded Content
+Each accordion should include:
+
+• Step description
+• Key activities
+• Customer involvement
+      • Expected outcome Optional:
+• Small process icon or illustration
+
+
+UX & Interaction
+The timeline should answer questions like:
+
+• What happens after I submit an inquiry?
+• When do I approve the sample?
+• When does production begin?
+• How is quality controlled?
+• What happens before shipping?
+
+Use:
+
+• Smooth accordion animation
+• Plus/Minus icon toggle
+• Gold highlight for active step
+• Subtle border transition
+      • Auto-scroll on mobile if needed Avoid heavy animations.
+
+
+SEO & Structure
+Use semantic HTML:
+
+• 
+• 
+• Introduction
+• Timeline container
+• <article> for each step
+     • Semantic <button> for accordion Naturally reinforce topics such as:
+• Product Consultation
+• Sample Development
+• Pattern Making
+• Production Approval
+• Bulk Manufacturing
+• Quality Control
+• Packing
+• Export Preparation
+• Private Label Manufacturing
+     • OEM Manufacturing Avoid keyword stuffing.
+
+
+Accessibility
+Ensure:
+
+• Keyboard navigation
+• and
+• Screen-reader friendly labels
+• Visible focus states
+• WCAG AA color contrast
+
+
+Performance
+
+• Keep accordion lightweight
+• Use CSS animations where possible
+• Avoid unnecessary JavaScript
+• Maintain excellent Core Web Vitals
+
+
+Future Scalability
+Build the timeline as a reusable, data-driven component.
+
+Future steps like Material Sourcing, Lab Testing, Final Audit, or Container Dispatch should be easy to add without changing the layout.
+
+
+Development Notes
+
+• Build the timeline using reusable accordion components.
+• Keep titles, summaries, and detailed content editable through a CMS or JSON.
+• Preserve the existing RayoRise design language.
+• Ensure responsive behavior across desktop, tablet, and mobile.
+• Allow future support for images, videos, or downloadable process guides.
+
+
+Expected Result
+This section should clearly explain the complete manufacturing journey, educate buyers at every stage, answer common questions before they contact sales, build confidence through transparency, and reinforce RayoRise as a professional, process-driven private-label manufacturing partner.
+
+
+
+
+
+

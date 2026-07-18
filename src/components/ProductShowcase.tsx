@@ -256,6 +256,46 @@ export default function ProductShowcase() {
             <ProductCard key={product.id} product={product} index={i} />
           ))}
         </div>
+
+        {/* Comparison table */}
+        <div style={{ marginTop: 32, background: "#15130f", padding: 18, borderRadius: 8 }}>
+          <h3 style={{ margin: 0, color: "#F0E8D8", fontFamily: "var(--font-barlow-condensed)", fontSize: 20 }}>Compare Our Products</h3>
+          <p style={{ marginTop: 8, color: "#8A7E70" }}>Use this table to quickly compare which product is right for your order.</p>
+
+          <div style={{ overflowX: "auto", marginTop: 12 }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 800 }}>
+              <thead>
+                <tr style={{ textAlign: "left", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                  <th style={{ padding: 10, background: "transparent", width: 240 }}></th>
+                  {products.map((p) => (
+                    <th key={p.id} style={{ padding: 10, color: "#F0E8D8" }}>{p.name}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Available Customization", "Full panel customisation", "Panel-only customisation", "Pant customisation"],
+                  ["Panels", "7-panel", "5-panel", "3-panel"],
+                  ["Colors", "Multiple plus accents", "Multiple", "Multiple"],
+                  ["Zippers", "Optional", "Optional", "Optional"],
+                  ["Ribbing", "Custom rib options", "Custom rib options", "Standard"],
+                  ["Labels", "Woven & printed", "Woven & printed", "Woven"],
+                  ["Packaging", "Branded packaging options", "Branded packaging options", "Standard packaging"],
+                  ["Branding", "Embroidery, print, badges", "Embroidery, print", "Embroidery, print"],
+                  ["MOQ", "From 50 units", "From 50 units", "From 50 units"],
+                ].map((row) => (
+                  <tr key={row[0] as string} style={{ borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+                    <td style={{ padding: 12, color: "#8A7E70", fontWeight: 700 }}>{row[0]}</td>
+                    <td style={{ padding: 12, color: "#8A7E70" }}>{row[1]}</td>
+                    <td style={{ padding: 12, color: "#8A7E70" }}>{row[2]}</td>
+                    <td style={{ padding: 12, color: "#8A7E70" }}>{row[3]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustStrip from "@/components/TrustStrip";
+import WhoWeBuildFor from "@/components/WhoWeBuildFor";
 import About from "@/components/About";
 import ProductShowcase from "@/components/ProductShowcase";
 import CustomizationCapabilities from "@/components/CustomizationCapabilities";
@@ -9,6 +10,8 @@ import ManufacturingProof from "@/components/ManufacturingProof";
 import FlagshipProduct from "@/components/FlagshipProduct";
 import BuyerPainPoints from "@/components/BuyerPainPoints";
 import TrustIndicators from "@/components/TrustIndicators";
+import KnowledgeCentre from "@/components/KnowledgeCentre";
+import FAQ from "@/components/FAQ";
 
 import Contact from "@/components/Contact";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -21,6 +24,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustStrip />
+        <WhoWeBuildFor />
         <About />
         <ProductShowcase />
         <CustomizationCapabilities />
@@ -29,6 +33,9 @@ export default function Home() {
         <FlagshipProduct />
         <BuyerPainPoints />
         <TrustIndicators />
+
+        <KnowledgeCentre />
+        <FAQ />
 
         <Contact />
       </main>

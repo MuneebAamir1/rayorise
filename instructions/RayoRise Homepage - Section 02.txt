@@ -1,0 +1,142 @@
+RayoRise Homepage - Section 02: Who We Build For (Development Deliverable)
+Objective
+This section should immediately help qualified B2B visitors identify themselves and understand that RayoRise manufactures for businesses-not individual consumers.
+
+Within a few seconds, visitors should feel:
+
+"This manufacturer works with businesses like mine."
+
+The goal is to improve buyer confidence, qualify leads, reduce bounce rate, and strengthen SEO and AI discoverability.
+
+
+Placement
+Place this section directly below the Hero.
+
+Order: 1. Hero 2. Who We Build For 3. Company Introduction (About)
+
+
+Section Heading
+Use:
+
+• Small eyebrow heading: WHO WE BUILD FOR
+• H2: Manufacturing for Ambitious Apparel Businesses
+
+Add a short paragraph explaining that RayoRise partners with businesses of all sizes-from startups launching their first collection to established brands scaling production-while specializing in football- inspired tracksuits.
+
+
+Layout
+Desktop: 4-column grid (8 cards)
+
+Tablet: 2 columns
+
+Mobile: 1 column
+
+All cards should maintain equal height.
+
+
+Industry Cards
+Create the following eight cards:
+
+
+TitleDescriptionClothing BrandsPrivate label manufacturing for independent apparel brands.Football Apparel BrandsCustom production for football-inspired collections and heritage sportswear labels.
+Sportswear BrandsPremium manufacturing for performance and lifestyle sportswear companies.Startup Fashion Brands
+Low MOQ production designed for emerging brands entering the market.Buying HousesReliable manufacturing support for international sourcing partners.ImportersExport-ready production with scalable manufacturing capacity.WholesalersBulk production tailored for wholesale distribution businesses.Retail ChainsConsistent production for private label retail collections.
+
+Card Design
+Each card should include:
+
+• Premium outline SVG icon
+• Industry title
+• One-line description
+• Full clickable area
+• Consistent border and radius
+• Equal spacing
+     • Soft gold accent on hover Keep interactions subtle:
+• Border color transition
+• Icon color transition
+• Soft shadow
+     • Slight upward movement (2-4px) Avoid heavy animations, rotation, or scaling.
+
+
+CTA Behavior
+Each card should be clickable.
+
+For now, link all cards to the Contact/Inquiry page.
+
+Build the component so each card can later have its own landing page without redesign. Example future URLs:
+• 
+• 
+• 
+• 
+
+
+Future Scalability
+Develop this as a reusable component with card data managed from an array or CMS. Future industries can be added without changing the layout, such as:
+• School Uniform Brands
+• Club Merchandise Brands
+• Corporate Sportswear
+• University Apparel
+• Private Sports Clubs
+• Teamwear Suppliers
+
+
+UX & Accessibility
+The section should be easy to scan and understood within 10-15 seconds. Ensure:
+• Keyboard accessibility
+• Visible focus states
+• ARIA labels
+• WCAG AA contrast
+• Decorative icons marked appropriately
+
+
+SEO & Semantic Structure
+Use semantic HTML:
+
+• 
+• 
+• Intro paragraph
+• Grid
+• for each card title
+
+Naturally reinforce concepts such as:
+
+• Private Label Manufacturing
+• OEM Manufacturing
+• ODM Development
+• Football-Inspired Tracksuits
+     • Business Buyer Types Avoid keyword stuffing.
+
+
+Performance
+
+• Use lightweight SVG icons
+• Avoid unnecessary images
+• Build cards primarily with CSS
+• Maintain excellent Core Web Vitals
+
+
+Design Consistency
+Match the existing Hero section:
+
+• Typography
+• Color palette
+• Spacing
+• Border style
+• Card radius
+• Hover behavior
+
+The transition from Hero to this section should feel seamless.
+
+
+Development Notes
+
+• Build as a reusable React/Next.js component.
+• Drive all card content from a configurable data structure.
+• Support future individual landing pages without code restructuring.
+• Follow the existing design system and avoid introducing a new visual style.
+
+
+Expected Result
+This section should clearly communicate that RayoRise is a B2B manufacturing partner, help qualified buyers recognize themselves instantly, improve lead quality, strengthen SEO and AI discoverability, and provide a scalable foundation for future industry-specific landing pages.
+
+

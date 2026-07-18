@@ -1,0 +1,285 @@
+RayoRise Homepage – Hero Section
+(Development Deliverable)
+Objective
+Keep the current premium design. Do not redesign the Hero section visually. The goal is to improve
+clarity, messaging, UX, SEO, accessibility, and performance while maintaining the existing layout.
+
+
+The Hero should communicate within 5–8 seconds:
+
+
+     • What RayoRise manufactures
+     • Who we manufacture for
+     • Why buyers should trust us
+     • What action they should take next
+
+It should clearly position RayoRise as a premium B2B manufacturer, not a retail clothing brand.
+
+
+
+
+Keep Existing Design
+Please keep the following as they are:
+
+
+     • Two-column layout
+     • Dark luxury theme
+     • Gold accent color
+     • Premium typography
+     • Product image placement
+     • Floating cards
+     • Navigation & sticky header
+     • Hero spacing and visual hierarchy
+     • WhatsApp floating button
+
+
+
+
+Brand Positioning
+The Hero should present RayoRise as:
+
+
+     • Premium B2B Manufacturer
+     • Private Label Manufacturing Partner
+     • OEM & ODM Partner
+     • Product Development Specialist
+     • Football-Inspired Tracksuit Manufacturer
+
+Avoid language that makes the business look like:
+
+
+     • A fashion brand
+     • A retail clothing store
+
+
+
+
+                                                    1
+     • A D2C apparel company
+
+
+
+
+Hero Copy
+The messaging should answer these questions immediately:
+
+
+     • What do we manufacture?
+     • Who do we manufacture for?
+     • Why choose us?
+     • Why trust us?
+     • What should the visitor do next?
+
+Copy hierarchy: 1. Industry position 2. Value proposition 3. Target customer 4. Competitive advantage 5.
+Supporting proof 6. CTA
+
+
+Avoid generic phrases like:
+
+
+     • Best Quality
+     • Premium Products
+     • World Class
+     • High Quality
+
+Focus on real manufacturing value instead.
+
+
+
+
+CTA Buttons
+Keep two buttons:
+
+
+Primary: Request Sample
+
+
+Secondary: Explore Manufacturing Process
+
+
+The second button should smoothly scroll to the Manufacturing Process section instead of opening
+another page.
+
+
+
+
+Trust Bar
+Replace the current three trust points with six capability indicators below the CTA buttons:
+
+
+     • Private Label Manufacturing
+     • OEM & ODM Development
+     • Sample Development
+     • Export Worldwide
+     • MOQ From 50 Units
+     • Dedicated Account Manager
+
+
+
+
+                                                    2
+Each item should have:
+
+
+     • Outline icon
+     • Short label
+     • Equal spacing
+     • Responsive wrapping on smaller screens
+
+
+
+
+Product Image & Floating Cards
+Keep the current render but improve:
+
+
+     • Higher-resolution image
+     • WebP format
+     • Responsive sizing
+     • Proper preload
+     • Sharp Retina quality
+
+Keep floating cards but standardize their style.
+
+
+Use only measurable information, for example:
+
+
+     • MOQ From 50 Units
+     • Sampling: 7–10 Days
+     • Production: 3–5 Weeks
+
+
+
+
+UX & UI
+The Hero should answer before scrolling: 1. Who we are 2. What we manufacture 3. Who we
+manufacture for 4. Why choose us 5. Next step
+
+
+Also ensure:
+
+
+     • Consistent spacing
+     • Button heights
+     • Card borders & radius
+     • Icon sizing
+     • Perfect grid alignment
+     • Smooth hover states
+     • Visible active navigation
+     • Accessible focus states
+     • No unnecessary animations
+
+
+
+
+Responsive
+Desktop: Keep existing layout.
+
+
+
+
+                                                   3
+Tablet: Stack content with image below text.
+
+
+Mobile order: 1. Headline 2. Description 3. CTA buttons 4. Trust bar 5. Product image
+
+
+Floating cards should reposition without overlapping content.
+
+
+
+
+SEO & Semantic SEO
+     • Only one H1 on the page.
+     • H1 should naturally include the primary search intent around custom football-inspired tracksuit
+       manufacturing.
+     • Avoid keyword stuffing.
+     • Reinforce related entities naturally, including:
+     • Tracksuits
+     • Track Jackets
+     • Track Pants
+     • Private Label Manufacturing
+     • OEM
+     • ODM
+     • Sample Development
+     • Bulk Manufacturing
+     • Product Development
+     • Football-Inspired Apparel
+     • Sportswear Manufacturing
+
+
+
+
+AI Search Readiness
+The opening content should clearly identify:
+
+
+     • Company type
+     • Industry
+     • Manufacturing services
+     • Product category
+     • Target audience
+     • Business model
+     • Global market focus
+
+Write in a way that's easy for AI systems (Google AI Overviews, ChatGPT, Gemini, Claude, Perplexity) to
+understand.
+
+
+
+
+Accessibility
+Ensure:
+
+
+     • Proper heading hierarchy
+     • Keyboard navigation
+
+
+
+
+                                                   4
+     • Visible focus states
+     • ARIA labels
+     • Descriptive image alt text
+     • WCAG AA color contrast
+     • Accessible button labels
+
+
+
+
+Performance
+Optimize for Core Web Vitals:
+
+
+     • WebP/AVIF images
+     • Responsive image sizes
+     • Preload Hero image
+     • Lazy-load below-the-fold images only
+     • Optimized font loading
+     • Minimal CLS
+     • Fast LCP
+
+
+
+
+Development Notes
+     • Use semantic HTML ( header , section , h1 , p , nav , etc.).
+     • Keep the Hero modular so copy, CTAs, and trust indicators can be updated independently later.
+     • Keep the code clean, reusable, and SEO-friendly.
+
+
+
+
+Expected Result
+The Hero should immediately establish RayoRise as a trusted premium B2B manufacturing partner,
+qualify serious buyers within seconds, support SEO and AI discoverability, perform well across all
+devices, and retain the current premium visual identity.
+
+
+
+
+                                                  5
+
