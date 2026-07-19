@@ -287,6 +287,67 @@ export default function About() {
               <BenefitCard key={benefit.title} benefit={benefit} />
             ))}
           </div>
+
+          {/* CTA button */}
+          <motion.a
+            href="/about"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
+            whileHover={{ scale: 1.03, boxShadow: "0 8px 32px rgba(201,145,58,0.25)" }}
+            whileTap={{ scale: 0.97 }}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              padding: "14px 32px",
+              background: G,
+              border: "none",
+              textDecoration: "none",
+              cursor: "pointer",
+              color: "#1A1612",
+              fontSize: 13,
+              fontWeight: 700,
+              fontFamily: "var(--font-dm-sans)",
+              letterSpacing: "0.04em",
+              width: "fit-content",
+              position: "relative",
+              overflow: "hidden",
+              alignSelf: "flex-start",
+            }}
+          >
+            <motion.span
+              initial={{ x: "-100%" }}
+              whileHover={{ x: "350%" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "35%",
+                height: "100%",
+                background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent)",
+                transform: "skewX(-20deg)",
+                pointerEvents: "none",
+              }}
+            />
+            <span style={{ position: "relative", zIndex: 1 }}>Learn More About Us</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{ position: "relative", zIndex: 1, flexShrink: 0 }}
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </motion.a>
         </div>
       </div>
     </section>
