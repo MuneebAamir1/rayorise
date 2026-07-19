@@ -111,7 +111,7 @@ export default function Hero() {
           variants={containerV}
           initial="hidden"
           animate="show"
-          style={{ display: "flex", flexDirection: "column", gap: 28, zIndex: 10 }}
+          style={{ display: "flex", flexDirection: "column", gap: 18, zIndex: 10 }}
         >
           {/* Pre-headline badge */}
           <motion.div variants={fadeUp}>
@@ -172,7 +172,7 @@ export default function Hero() {
               lineHeight: 1.6,
             }}
           >
-            Low MOQ <span style={{ color: G, margin: "0 6px" }}>·</span> Fast Sampling <span style={{ color: G, margin: "0 6px" }}>·</span> Full Panel Customisation
+            Premium tracksuit manufacturing for UK streetwear brands
           </motion.p>
 
           {/* CTAs */}
@@ -184,6 +184,100 @@ export default function Hero() {
             <HeroCTA href="/#contact" label="Request Sample" primary />
             {/* Secondary CTA */}
             <HeroCTA href="/products/tracksuits" label="View Tracksuit" />
+          </motion.div>
+
+          {/* Capability indicators */}
+          <motion.div
+            variants={fadeUp}
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "6px 10px",
+            }}
+          >
+            {[
+              { icon: "factory", label: "Private Label" },
+              { icon: "pen", label: "OEM & ODM" },
+              { icon: "flask", label: "Sample Dev" },
+              { icon: "globe", label: "Export Worldwide" },
+              { icon: "package", label: "MOQ 50 Units" },
+              { icon: "user", label: "Account Manager" },
+            ].map((item, i) => (
+              <div
+                key={i}
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 5,
+                  padding: "3px 8px",
+                  border: "1px solid rgba(201,145,58,0.12)",
+                  borderRadius: 3,
+                  background: "rgba(201,145,58,0.04)",
+                }}
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke={G}
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{ flexShrink: 0 }}
+                >
+                  {item.icon === "factory" && (
+                    <>
+                      <path d="M2 20V8l6-4v16" />
+                      <path d="M22 20V8l-6-4v16" />
+                      <path d="M8 20h14" />
+                      <path d="M2 20h6" />
+                    </>
+                  )}
+                  {item.icon === "pen" && (
+                    <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+                  )}
+                  {item.icon === "flask" && (
+                    <>
+                      <path d="M9 3v6L5 17a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2L15 9V3" />
+                      <path d="M9 21h6" />
+                      <path d="M9 3h6" />
+                    </>
+                  )}
+                  {item.icon === "globe" && (
+                    <>
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M2 12h20" />
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                    </>
+                  )}
+                  {item.icon === "package" && (
+                    <>
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 2 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      <path d="M12 22V12" />
+                    </>
+                  )}
+                  {item.icon === "user" && (
+                    <>
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                      <circle cx="12" cy="7" r="4" />
+                    </>
+                  )}
+                </svg>
+                <span
+                  style={{
+                    fontSize: 10.5,
+                    fontWeight: 500,
+                    color: "#C8BFA8",
+                    fontFamily: "var(--font-dm-sans)",
+                    letterSpacing: "0.01em",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {item.label}
+                </span>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
 

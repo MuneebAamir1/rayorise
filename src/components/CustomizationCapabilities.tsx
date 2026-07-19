@@ -18,20 +18,109 @@ const collageImages = [
   { src: "/images/custom-labelling.png", alt: "Custom labels & packaging", label: "Finishing" },
 ];
 
-/* ── Feature annotations ── */
-const annotations = [
-  { label: "Custom Panels", desc: "Unique panel layouts built to your design." },
-  { label: "Custom Colours", desc: "Unlimited Pantone-matched colourways." },
-  { label: "Branding Options", desc: "Embroidery, printing, labels & patches." },
-  { label: "Perfect Fit", desc: "Tailored to your exact measurements." },
-];
-
-/* ── Bottom pills ── */
-const pills = [
-  { icon: "✦", title: "Complete Design Freedom", desc: "Your ideas, our expertise." },
-  { icon: "◆", title: "Premium Materials", desc: "Quality you can feel." },
-  { icon: "★", title: "Brand-Focused", desc: "Manufactured for impact." },
-  { icon: "●", title: "Reliable Production", desc: "On-time, every time." },
+/* ── Customisation categories (CMS-ready) ── */
+const categories = [
+  {
+    title: "Panel Construction",
+    body: "Custom panel layouts, contrast panels, side panels, shoulder panels, and sleeve construction — all built to your design.",
+    benefit: "Create a unique garment design that reflects your brand identity.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M4 4h16v16H4z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 4v16M15 4v16M4 9h16M4 15h16" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Colour Matching",
+    body: "Main colour, secondary colour, accent colour, and contrast detailing — with consistent colour matching across every production run.",
+    benefit: "Colour consistency is maintained throughout production.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <circle cx="12" cy="12" r="10" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="12" cy="12" r="4" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Branding Methods",
+    body: "Embroidery, screen printing, heat transfer, silicone badges, rubber patches, and woven patches — with fully customisable placement.",
+    benefit: "Branding placement is fully customisable to your design.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Labels",
+    body: "Neck labels, size labels, care labels, composition labels, and country of origin labels — all custom-branded for your label.",
+    benefit: "Labels are an important part of professional brand development.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M7 7h.01" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Hangtags",
+    body: "Custom shape, material, finish, string options, and printed branding — designed to match your brand identity at the point of sale.",
+    benefit: "Complete your product presentation with branded hangtags.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <rect x="3" y="3" width="18" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M3 9h18M9 21V9" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Packaging",
+    body: "Poly bags, custom stickers, barcode labels, carton labels, shipping marks, and retail-ready packaging options.",
+    benefit: "Products are prepared for retail or wholesale distribution.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 22V12" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Trims & Accessories",
+    body: "Drawcords, cord ends, eyelets, toggles, and elastic details — functional trims that improve both usability and brand identity.",
+    benefit: "Trims improve both functionality and brand identity.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M4 20h16M4 4h16" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M8 12h8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 8v8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Rib Options",
+    body: "Collar rib, cuff rib, and waistband rib — with options for colours, stripe patterns, and construction to match your design.",
+    benefit: "Rib details define the fit and finish of your garment.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M8 6v12M16 6v12" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Zip Options",
+    body: "Nylon zippers, coil zippers, metal pullers, custom pull tabs, and matching colours — zipper selection affects both appearance and performance.",
+    benefit: "Zipper selection affects both appearance and performance.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M4 8h16M4 16h16" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M8 8v8M16 8v8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 8v8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
 ];
 
 /* ── Reveal wrapper ── */
@@ -59,10 +148,10 @@ export default function CustomizationCapabilities() {
 
   useGSAP(() => {
     if (!sectionRef.current) return;
-    const els = sectionRef.current.querySelectorAll(".anno-item");
-    gsap.fromTo(els, { opacity: 0, x: 40 }, {
-      opacity: 1, x: 0, duration: 0.5, stagger: 0.12, ease: "power2.out",
-      scrollTrigger: { trigger: els[0]?.parentElement, start: "top 65%", once: true },
+    const cards = sectionRef.current.querySelectorAll("[data-cat-card]");
+    gsap.fromTo(cards, { opacity: 0, y: 30 }, {
+      opacity: 1, y: 0, duration: 0.6, stagger: 0.06, ease: "power2.out",
+      scrollTrigger: { trigger: cards[0]?.parentElement, start: "top 80%", once: true },
     });
   }, { scope: sectionRef });
 
@@ -70,18 +159,15 @@ export default function CustomizationCapabilities() {
     <section ref={sectionRef} id="customization" style={{ background: "#1A1612", overflow: "hidden" }}>
       <style>{`
         .cust-main-grid { grid-template-columns: 1fr; gap: 40px; }
-        .cust-annos-col { display: none; }
-        .cust-pills-grid { grid-template-columns: 1fr 1fr; }
-        @media(min-width: 768px) {
-          .cust-pills-grid { grid-template-columns: repeat(4, 1fr) !important; }
-        }
         @media(min-width: 1024px) {
-          .cust-main-grid { grid-template-columns: 1fr 1.2fr 0.65fr !important; gap: 32px !important; }
-          .cust-annos-col { display: flex !important; }
+          .cust-main-grid { grid-template-columns: 1fr 1.2fr !important; gap: 48px !important; }
         }
+        .cat-grid { grid-template-columns: 1fr; gap: 16px; }
+        @media(min-width: 640px) { .cat-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media(min-width: 1024px) { .cat-grid { grid-template-columns: repeat(3, 1fr) !important; } }
       `}</style>
 
-      {/* ═══ HERO 100vh ═══ */}
+      {/* ═══ HERO TOP ═══ */}
       <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", maxWidth: 1320, margin: "0 auto", padding: "80px 28px 40px" }}>
 
         <div className="cust-main-grid" style={{ display: "grid", alignItems: "center" }}>
@@ -90,18 +176,18 @@ export default function CustomizationCapabilities() {
           <Reveal>
             <div style={{ display: "flex", flexDirection: "column", gap: 16, alignItems: "flex-start" }}>
               <p style={{ fontSize: 11, textTransform: "uppercase", letterSpacing: "0.2em", color: G, fontFamily: "var(--font-dm-sans)", fontWeight: 600, margin: 0 }}>
-                Customisation Capabilities
+                CUSTOMISATION CAPABILITIES
               </p>
               <h2 style={{ fontFamily: "var(--font-barlow-condensed)", fontWeight: 900, fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.05, color: "#F0E8D8", margin: 0 }}>
-                Fully Custom.<br />
-                <span style={{ color: G }}>Built for Your Brand.</span>
+                Complete Private-Label<br />
+                <span style={{ color: G }}>Product Development.</span>
               </h2>
               <div ref={barRef} style={{ width: 56, height: 3, background: G, transformOrigin: "left" }} />
-              
-              {/* Responsive side-by-side flex wrapper */}
+
+              {/* Intro + CTA */}
               <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", gap: 24, width: "100%", marginTop: 8 }}>
-                <p style={{ fontSize: 14, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", lineHeight: 1.7, maxWidth: 380, margin: 0 }}>
-                  From fabrics and colours to fit and branding — every detail is customised to match your brand identity and market.
+                <p style={{ fontSize: 14, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", lineHeight: 1.7, maxWidth: 420, margin: 0 }}>
+                  Every product is made to order and can be customised across garment construction, branding, labels, packaging, and trims — so your product matches your brand exactly. We're your development partner, not just a manufacturer.
                 </p>
                 <motion.a
                   href="/customize"
@@ -118,29 +204,100 @@ export default function CustomizationCapabilities() {
             </div>
           </Reveal>
 
-          {/* ── CENTER: Creative Collage ── */}
+          {/* ── RIGHT: Creative Collage ── */}
           <Reveal delay={0.15}>
             <MosaicCollage />
           </Reveal>
+        </div>
+      </div>
 
-          {/* ── RIGHT: Annotations (desktop) ── */}
-          <div className="cust-annos-col" style={{ flexDirection: "column", justifyContent: "center", gap: 28, paddingLeft: 8 }}>
-            {annotations.map((a, i) => (
-              <AnnotationItem key={a.label} label={a.label} desc={a.desc} index={i} />
-            ))}
-          </div>
+      {/* ═══ CATEGORIES GRID ═══ */}
+      <div style={{ maxWidth: 1320, margin: "0 auto", padding: "0 28px 64px" }}>
+        <div className="cat-grid" style={{ display: "grid" }}>
+          {categories.map((cat, i) => (
+            <CategoryCard key={cat.title} cat={cat} index={i} />
+          ))}
         </div>
 
-        {/* ── PILLS ── */}
-        <Reveal delay={0.3}>
-          <div className="cust-pills-grid" style={{ display: "grid", gap: 12, marginTop: 40, borderTop: "1px solid rgba(255,255,255,0.04)", paddingTop: 28 }}>
-            {pills.map((p) => (
-              <PillItem key={p.title} pill={p} />
-            ))}
+        {/* Information strip */}
+        <Reveal delay={0.2}>
+          <div
+            style={{
+              marginTop: 32,
+              padding: "20px 24px",
+              border: "1px solid rgba(201,145,58,0.12)",
+              background: "rgba(201,145,58,0.03)",
+              textAlign: "center",
+            }}
+          >
+            <p style={{ fontSize: 13, color: "#C8BFA8", fontFamily: "var(--font-dm-sans)", margin: 0, lineHeight: 1.7 }}>
+              Every element can be combined to create a fully customised private-label product tailored to your brand.
+            </p>
           </div>
         </Reveal>
       </div>
     </section>
+  );
+}
+
+/* ═══════ CATEGORY CARD ═══════ */
+function CategoryCard({ cat, index }: { cat: typeof categories[0]; index: number }) {
+  const [hov, setHov] = useState(false);
+  return (
+    <motion.div
+      data-cat-card=""
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        background: "#221E19",
+        border: "1px solid rgba(255,255,255,0.06)",
+        borderTop: `2px solid ${G}`,
+        padding: 24,
+        display: "flex",
+        flexDirection: "column",
+        gap: 12,
+        cursor: "default",
+        opacity: 0,
+        position: "relative",
+        overflow: "hidden",
+        transition: "border-color 0.3s, transform 0.25s cubic-bezier(0.16,1,0.3,1)",
+        borderColor: hov ? "rgba(201,145,58,0.15)" : "rgba(255,255,255,0.06)",
+        transform: hov ? "translateY(-4px)" : "translateY(0)",
+      }}
+    >
+      {/* Hover glow */}
+      <motion.div
+        animate={{ opacity: hov ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+        style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 0%, rgba(201,145,58,0.06) 0%, transparent 70%)", pointerEvents: "none" }}
+      />
+
+      {/* Icon + Title */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <motion.span
+          animate={{ color: hov ? G : "#8A7E70" }}
+          transition={{ duration: 0.3 }}
+          style={{ display: "flex", alignItems: "center", color: "#8A7E70", flexShrink: 0 }}
+        >
+          {cat.icon}
+        </motion.span>
+        <h3 style={{ fontSize: 15, fontWeight: 700, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+          {cat.title}
+        </h3>
+      </div>
+
+      {/* Description */}
+      <p style={{ fontSize: 12.5, lineHeight: 1.7, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+        {cat.body}
+      </p>
+
+      {/* Buyer benefit */}
+      <div style={{ marginTop: "auto", paddingTop: 8 }}>
+        <span style={{ fontSize: 11, color: G, fontFamily: "var(--font-dm-sans)", fontWeight: 500, fontStyle: "italic" }}>
+          {cat.benefit}
+        </span>
+      </div>
+    </motion.div>
   );
 }
 
@@ -250,48 +407,6 @@ function CollageCell({ src, alt, label, style, rotate, delay }: {
           style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 2, background: G, transformOrigin: "left", zIndex: 5 }}
         />
       </motion.div>
-    </motion.div>
-  );
-}
-
-/* ═══════ ANNOTATION ITEM ═══════ */
-function AnnotationItem({ label, desc, index }: { label: string; desc: string; index: number }) {
-  const [hov, setHov] = useState(false);
-  return (
-    <motion.div
-      className="anno-item"
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-      style={{ opacity: 0 }}
-    >
-      <motion.div
-        animate={{ x: hov ? 4 : 0, borderColor: hov ? "rgba(201,145,58,0.3)" : "rgba(255,255,255,0.04)" }}
-        transition={{ duration: 0.25 }}
-        style={{ borderLeft: "2px solid rgba(255,255,255,0.04)", paddingLeft: 14 }}
-      >
-        <p style={{ fontSize: 13, fontWeight: 700, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: "0 0 3px" }}>{label}</p>
-        <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0, lineHeight: 1.5 }}>{desc}</p>
-      </motion.div>
-    </motion.div>
-  );
-}
-
-/* ═══════ PILL ITEM ═══════ */
-function PillItem({ pill }: { pill: typeof pills[0] }) {
-  const [hov, setHov] = useState(false);
-  return (
-    <motion.div
-      onMouseEnter={() => setHov(true)}
-      onMouseLeave={() => setHov(false)}
-      animate={{ borderColor: hov ? "rgba(201,145,58,0.25)" : "rgba(255,255,255,0.04)" }}
-      transition={{ duration: 0.25 }}
-      style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "14px 16px", border: "1px solid rgba(255,255,255,0.04)", background: hov ? "rgba(201,145,58,0.03)" : "transparent", transition: "background 0.25s", cursor: "default" }}
-    >
-      <span style={{ fontSize: 14, color: G, lineHeight: 1, flexShrink: 0, marginTop: 2 }}>{pill.icon}</span>
-      <div>
-        <p style={{ fontSize: 12, fontWeight: 700, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: "0 0 2px" }}>{pill.title}</p>
-        <p style={{ fontSize: 11, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>{pill.desc}</p>
-      </div>
     </motion.div>
   );
 }
