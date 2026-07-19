@@ -149,7 +149,7 @@ export default function WhoWeBuildFor() {
           </motion.p>
         </motion.div>
 
-        {/* ── Metrics Strip ── */}
+        {/* ── Metrics Strip ──
         <motion.div
           initial="hidden"
           animate="show"
@@ -186,7 +186,7 @@ export default function WhoWeBuildFor() {
               <div style={{ marginTop: 4, fontSize: 10, letterSpacing: "0.15em", textTransform: "uppercase", color: "#8A7E70", fontFamily: "var(--font-dm-sans)" }}>{s.label}</div>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* ── Industry Cards ── */}
         <motion.div
