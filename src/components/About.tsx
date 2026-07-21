@@ -12,7 +12,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 /* ─── Benefit cards data ─── */
 const benefits = [
   {
-    title: "Dedicated Product Expertise",
+    title: "Dedicated Expertise",
     body: "Every team member knows tracksuit construction inside out — from rib cuffs to panel alignment.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 20, height: 20 }}>
@@ -21,7 +21,7 @@ const benefits = [
     ),
   },
   {
-    title: "Precision Pattern Development",
+    title: "Pattern Engineering",
     body: "Patterns are engineered specifically for tracksuit silhouettes, not adapted from generic blocks.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 20, height: 20 }}>
@@ -31,7 +31,7 @@ const benefits = [
     ),
   },
   {
-    title: "Consistent Quality Standards",
+    title: "Quality Control",
     body: "Dedicated QC at every stage — fabric inspection, stitching audit, and final garment check.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 20, height: 20 }}>
@@ -41,33 +41,11 @@ const benefits = [
     ),
   },
   {
-    title: "Faster Sampling Process",
-    body: "Streamlined sample development with dedicated pattern graders and sample machinists.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 20, height: 20 }}>
-        <circle cx="12" cy="12" r="10" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M12 6v6l4 2" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Scalable Bulk Production",
+    title: "Scalable Production",
     body: "Production capacity scales from 50 to 5,000 units without compromising fit or finish.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 20, height: 20 }}>
         <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Long-Term Manufacturing Partnership",
-    body: "We grow with your brand — repeat production runs with consistent quality and priority scheduling.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 20, height: 20 }}>
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="9" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M16 3.13a4 4 0 010 7.75" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },
@@ -188,7 +166,7 @@ export default function About() {
       {/* Animated gold top line */}
       <div data-gold-line="" style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: `linear-gradient(90deg, transparent, rgba(201,145,58,0.15) 30%, rgba(201,145,58,0.15) 70%, transparent)`, transformOrigin: "left", transform: "scaleX(0)" }} />
 
-      <style>{`@media(min-width:768px){.about-grid{grid-template-columns:1fr 1fr!important}} @media(min-width:640px){.benefit-grid{grid-template-columns:repeat(2,1fr)!important}} @media(min-width:1024px){.benefit-grid{grid-template-columns:repeat(3,1fr)!important}}`}</style>
+      <style>{`@media(min-width:768px){.about-grid{grid-template-columns:1fr 1fr!important}} @media(min-width:640px){.benefit-grid{grid-template-columns:repeat(2,1fr)!important}} @media(min-width:1024px){.benefit-grid{grid-template-columns:repeat(4,1fr)!important}}`}</style>
       <div className="about-grid" style={{ maxWidth: 1280, margin: "0 auto", padding: "0 32px", display: "grid", gridTemplateColumns: "1fr", gap: 64, alignItems: "start" }}>
 
         {/* LEFT — Educational visual */}
@@ -281,74 +259,77 @@ export default function About() {
             </div>
           </div>
 
-          {/* Benefits grid */}
-          <div className="benefit-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14, marginTop: 4 }}>
-            {benefits.map((benefit, i) => (
-              <BenefitCard key={benefit.title} benefit={benefit} />
-            ))}
-          </div>
-
-          {/* CTA button */}
-          <motion.a
-            href="/about"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
-            whileHover={{ scale: 1.03, boxShadow: "0 8px 32px rgba(201,145,58,0.25)" }}
-            whileTap={{ scale: 0.97 }}
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: 10,
-              padding: "14px 32px",
-              background: G,
-              border: "none",
-              textDecoration: "none",
-              cursor: "pointer",
-              color: "#1A1612",
-              fontSize: 13,
-              fontWeight: 700,
-              fontFamily: "var(--font-dm-sans)",
-              letterSpacing: "0.04em",
-              width: "fit-content",
-              position: "relative",
-              overflow: "hidden",
-              alignSelf: "flex-start",
-            }}
-          >
-            <motion.span
-              initial={{ x: "-100%" }}
-              whileHover={{ x: "350%" }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "35%",
-                height: "100%",
-                background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent)",
-                transform: "skewX(-20deg)",
-                pointerEvents: "none",
-              }}
-            />
-            <span style={{ position: "relative", zIndex: 1 }}>Learn More About Us</span>
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{ position: "relative", zIndex: 1, flexShrink: 0 }}
-            >
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </motion.a>
         </div>
+      </div>
+
+      {/* Full-width benefits grid + CTA */}
+      <div style={{ maxWidth: 1280, margin: "40px auto 0", padding: "0 32px" }}>
+        <div className="benefit-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 20, marginTop: 4 }}>
+          {benefits.map((benefit, i) => (
+            <BenefitCard key={benefit.title} benefit={benefit} />
+          ))}
+        </div>
+
+        {/* CTA button */}
+        <motion.a
+          href="/about"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
+          whileHover={{ scale: 1.03, boxShadow: "0 8px 32px rgba(201,145,58,0.25)" }}
+          whileTap={{ scale: 0.97 }}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 10,
+            padding: "14px 32px",
+            background: G,
+            border: "none",
+            textDecoration: "none",
+            cursor: "pointer",
+            color: "#1A1612",
+            fontSize: 13,
+            fontWeight: 700,
+            fontFamily: "var(--font-dm-sans)",
+            letterSpacing: "0.04em",
+            width: "fit-content",
+            position: "relative",
+            overflow: "hidden",
+            marginTop: 24,
+          }}
+        >
+          <motion.span
+            initial={{ x: "-100%" }}
+            whileHover={{ x: "350%" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "35%",
+              height: "100%",
+              background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent)",
+              transform: "skewX(-20deg)",
+              pointerEvents: "none",
+            }}
+          />
+          <span style={{ position: "relative", zIndex: 1 }}>Learn More About Us</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{ position: "relative", zIndex: 1, flexShrink: 0 }}
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </motion.a>
       </div>
     </section>
   );
@@ -366,17 +347,17 @@ function BenefitCard({ benefit }: { benefit: typeof benefits[0] }) {
         background: "#2A2520",
         border: "1px solid rgba(255,255,255,0.06)",
         borderTop: `2px solid ${G}`,
-        padding: 20,
+        padding: "16px 18px",
         display: "flex",
         flexDirection: "column",
-        gap: 10,
+        gap: 6,
         cursor: "default",
         opacity: 0,
         position: "relative",
         overflow: "hidden",
         transition: "border-color 0.3s, transform 0.25s cubic-bezier(0.16,1,0.3,1)",
         borderColor: hov ? "rgba(201,145,58,0.15)" : "rgba(255,255,255,0.06)",
-        transform: hov ? "translateY(-4px)" : "translateY(0)",
+        transform: hov ? "translateY(-3px)" : "translateY(0)",
       }}
     >
       {/* Hover glow */}
@@ -385,19 +366,19 @@ function BenefitCard({ benefit }: { benefit: typeof benefits[0] }) {
         transition={{ duration: 0.3 }}
         style={{ position: "absolute", inset: 0, background: "radial-gradient(circle at 50% 0%, rgba(201,145,58,0.06) 0%, transparent 70%)", pointerEvents: "none" }}
       />
-      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
         <motion.span
           animate={{ color: hov ? G : "#8A7E70" }}
           transition={{ duration: 0.3 }}
-          style={{ display: "flex", alignItems: "center", color: "#8A7E70" }}
+          style={{ display: "flex", alignItems: "center", color: "#8A7E70", flexShrink: 0 }}
         >
           {benefit.icon}
         </motion.span>
-        <h4 style={{ fontSize: 13, fontWeight: 600, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+        <h4 style={{ fontSize: 13, fontWeight: 600, color: "#F0E8D8", fontFamily: "var(--font-dm-sans)", margin: 0, whiteSpace: "nowrap" }}>
           {benefit.title}
         </h4>
       </div>
-      <p style={{ fontSize: 12, lineHeight: 1.7, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
+      <p style={{ fontSize: 11.5, lineHeight: 1.5, color: "#8A7E70", fontFamily: "var(--font-dm-sans)", margin: 0 }}>
         {benefit.body}
       </p>
     </div>

@@ -1,0 +1,51 @@
+RayoRise™ Material Library
+Version 1.0
+Foundation document for THE FIRST TEN™. Focused on premium football-inspired woven trackwear.
+Nylon Taslan
+Primary Use: Hero fabric
+Composition: 100% Nylon
+GSM: 115–140 GSM
+Finish: Matte DWR
+Advantages: Premium hand feel, wind resistant, lightweight, authentic 90s football look
+Limitations: Higher cost
+RayoRise Rating: ★★★★★
+Polyester Taslan
+Primary Use: Core OEM
+Composition: 100% Polyester
+GSM: 110–135 GSM
+Finish: Matte
+Advantages: Excellent value, durable, export friendly
+Limitations: Slightly less premium
+RayoRise Rating: ★★★★★
+Recycled Polyester Taslan
+Primary Use: Eco
+Composition: 100% Recycled Polyester
+GSM: 110–130 GSM
+Finish: PFC-free DWR
+Advantages: Sustainable
+Limitations: Higher cost
+RayoRise Rating: ★★★★☆
+Supplex Nylon
+Primary Use: Luxury
+Composition: 100% Nylon
+GSM: 120–145 GSM
+Finish: Soft matte
+Advantages: Luxury feel
+Limitations: Expensive
+RayoRise Rating: ★★★★☆
+Micro Peach Polyester
+Primary Use: Lifestyle
+Composition: 100% Polyester
+GSM: 120–150 GSM
+Finish: Peach finish
+Advantages: Soft touch
+Limitations: Less technical
+RayoRise Rating: ★★★☆☆
+Recommended Lining
+100% Polyester Mesh | 65–90 GSM | Breathable | Moisture Management
+Material Pyramid
+Tier 1: Nylon Taslan
+Tier 2: Polyester Taslan
+Tier 3: Recycled Polyester Taslan
+Tier 4: Supplex Nylon
+Tier 5: Micro Peach Polyester

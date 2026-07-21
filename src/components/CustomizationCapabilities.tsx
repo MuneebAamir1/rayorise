@@ -21,7 +21,7 @@ const collageImages = [
 /* ── Customisation categories (CMS-ready) ── */
 const categories = [
   {
-    title: "Panel Construction",
+    title: "Panels",
     body: "Custom panel layouts, contrast panels, side panels, shoulder panels, and sleeve construction — all built to your design.",
     benefit: "Create a unique garment design that reflects your brand identity.",
     icon: (
@@ -32,19 +32,7 @@ const categories = [
     ),
   },
   {
-    title: "Colour Matching",
-    body: "Main colour, secondary colour, accent colour, and contrast detailing — with consistent colour matching across every production run.",
-    benefit: "Colour consistency is maintained throughout production.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
-        <circle cx="12" cy="12" r="10" strokeLinecap="round" strokeLinejoin="round" />
-        <circle cx="12" cy="12" r="4" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Branding Methods",
+    title: "Branding",
     body: "Embroidery, screen printing, heat transfer, silicone badges, rubber patches, and woven patches — with fully customisable placement.",
     benefit: "Branding placement is fully customisable to your design.",
     icon: (
@@ -65,29 +53,7 @@ const categories = [
     ),
   },
   {
-    title: "Hangtags",
-    body: "Custom shape, material, finish, string options, and printed branding — designed to match your brand identity at the point of sale.",
-    benefit: "Complete your product presentation with branded hangtags.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
-        <rect x="3" y="3" width="18" height="18" rx="2" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M3 9h18M9 21V9" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Packaging",
-    body: "Poly bags, custom stickers, barcode labels, carton labels, shipping marks, and retail-ready packaging options.",
-    benefit: "Products are prepared for retail or wholesale distribution.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
-        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M12 22V12" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Trims & Accessories",
+    title: "Trims",
     body: "Drawcords, cord ends, eyelets, toggles, and elastic details — functional trims that improve both usability and brand identity.",
     benefit: "Trims improve both functionality and brand identity.",
     icon: (
@@ -99,25 +65,25 @@ const categories = [
     ),
   },
   {
-    title: "Rib Options",
-    body: "Collar rib, cuff rib, and waistband rib — with options for colours, stripe patterns, and construction to match your design.",
-    benefit: "Rib details define the fit and finish of your garment.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
-        <path d="M4 6h16M4 12h16M4 18h16" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M8 6v12M16 6v12" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Zip Options",
-    body: "Nylon zippers, coil zippers, metal pullers, custom pull tabs, and matching colours — zipper selection affects both appearance and performance.",
-    benefit: "Zipper selection affects both appearance and performance.",
+    title: "Hardware",
+    body: "Nylon zippers, coil zippers, metal pullers, custom pull tabs, and matching colours — hardware selection affects both appearance and performance.",
+    benefit: "Hardware selection affects both appearance and performance.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
         <path d="M4 8h16M4 16h16" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M8 8v8M16 8v8" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M12 8v8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    title: "Packaging",
+    body: "Poly bags, custom stickers, barcode labels, carton labels, shipping marks, and retail-ready packaging options.",
+    benefit: "Products are prepared for retail or wholesale distribution.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke={G} strokeWidth="1.5" style={{ width: 22, height: 22 }}>
+        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 22V12" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),
   },

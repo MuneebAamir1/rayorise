@@ -9,8 +9,8 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 
 const industries = [
   {
-    title: "Clothing Brands",
-    desc: "Private label manufacturing for independent apparel brands.",
+    title: "Private Label Brands",
+    desc: "Full-spectrum manufacturing for clothing brands, football apparel labels, and sportswear companies — with complete customisation across every garment.",
     svg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
         <path d="M7 7h10l1 3-3 2v8H9v-8L6 10l1-3Z" strokeLinecap="round" strokeLinejoin="round" />
@@ -18,27 +18,8 @@ const industries = [
     ),
   },
   {
-    title: "Football Apparel Brands",
-    desc: "Custom production for football-inspired collections and heritage sportswear labels.",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
-        <circle cx="12" cy="12" r="7.5" />
-        <path d="M10 8.5 12 7l2 1.5-1 2.5h-2l-1-2.5Z" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Sportswear Brands",
-    desc: "Premium manufacturing for performance and lifestyle sportswear companies.",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
-        <path d="M6 9.5 12 6l6 3.5v8L12 18l-6-.5v-8Z" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Startup Fashion Brands",
-    desc: "Low MOQ production designed for emerging brands entering the market.",
+    title: "Startup Brands",
+    desc: "Low MOQ production and fast sampling designed for emerging brands launching their first collection or testing new markets.",
     svg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
         <path d="M12 4v16M4 12h16" strokeLinecap="round" />
@@ -46,8 +27,8 @@ const industries = [
     ),
   },
   {
-    title: "Buying Houses",
-    desc: "Reliable manufacturing support for international sourcing partners.",
+    title: "Importers & Buying Houses",
+    desc: "Reliable manufacturing support for international sourcing partners with export-ready production and scalable capacity.",
     svg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
         <path d="M4.5 19.5h15M6 19.5V9.75L12 5l6 4.75v9.75" strokeLinecap="round" strokeLinejoin="round" />
@@ -55,31 +36,12 @@ const industries = [
     ),
   },
   {
-    title: "Importers",
-    desc: "Export-ready production with scalable manufacturing capacity.",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
-        <path d="M4.5 15h15l-1.5 3h-12zM7 15V9l5-3 5 3v6" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Wholesalers",
-    desc: "Bulk production tailored for wholesale distribution businesses.",
+    title: "Retailers & Distributors",
+    desc: "Consistent bulk production for retail chains and wholesale distribution businesses — with scalable manufacturing and reliable lead times.",
     svg: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
         <rect x="5" y="7" width="14" height="10" rx="2" />
         <path d="M8 10h8M8 13h6" strokeLinecap="round" />
-      </svg>
-    ),
-  },
-  {
-    title: "Retail Chains",
-    desc: "Consistent production for private label retail collections.",
-    svg: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" className="h-[18px] w-[18px]">
-        <path d="M5 10h14l-1 8H6l-1-8Z" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M8 10a4 4 0 0 1 8 0" strokeLinecap="round" />
       </svg>
     ),
   },

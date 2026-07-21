@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
+import MaterialLibrary from "@/components/MaterialLibrary";
 
 const G = "#C9913A";
 const GL = "#DBAA55";
@@ -36,47 +37,6 @@ const products = [
     image: "/images/product-pants.png",
     features: ["Elasticated waistband", "Side stripe panel", "Draw cord + side pockets"],
   },
-];
-
-/* ─── Comparison table data (editable / CMS-ready) ─── */
-const comparisonRows: { label: string; values: string[] }[] = [
-  { label: "Available Customization", values: ["Full panel customisation", "Panel-only customisation", "Pant customisation"] },
-  { label: "Panels", values: ["7-panel", "5-panel", "3-panel"] },
-  { label: "Colors", values: ["Multiple plus accents", "Multiple", "Multiple"] },
-  { label: "Zippers", values: ["Optional", "Optional", "Optional"] },
-  { label: "Ribbing", values: ["Custom rib options", "Custom rib options", "Standard"] },
-  { label: "Labels", values: ["Woven & printed", "Woven & printed", "Woven"] },
-  { label: "Packaging", values: ["Branded packaging options", "Branded packaging options", "Standard packaging"] },
-  { label: "Branding", values: ["Embroidery, print, badges", "Embroidery, print", "Embroidery, print"] },
-  { label: "MOQ", values: ["From 50 units", "From 50 units", "From 50 units"] },
-];
-
-const brandingOptions: { label: string; values: string[] }[] = [
-  { label: "Embroidery", values: ["✓", "✓", "✓"] },
-  { label: "Screen Print", values: ["✓", "✓", "✓"] },
-  { label: "Heat Transfer", values: ["✓", "✓", "✓"] },
-  { label: "Woven Label", values: ["✓", "✓", "✓"] },
-  { label: "Rubber Patch", values: ["✓", "✓", "—"] },
-  { label: "Silicone Badge", values: ["✓", "✓", "—"] },
-];
-
-const recommendedFabrics: { label: string; values: string[] }[] = [
-  { label: "280gsm French Terry", values: ["✓", "✓", "✓"] },
-  { label: "320gsm Brushed Fleece", values: ["✓", "✓", "✓"] },
-  { label: "Ribbed Cuff & Hem", values: ["✓", "✓", "✓"] },
-  { label: "Mesh Lining", values: ["✓", "✓", "—"] },
-];
-
-const fitOptions: { label: string; values: string[] }[] = [
-  { label: "Regular Fit", values: ["✓", "✓", "✓"] },
-  { label: "Slim Fit", values: ["✓", "✓", "✓"] },
-  { label: "Oversized Fit", values: ["✓", "✓", "✓"] },
-  { label: "Relaxed Fit", values: ["✓", "✓", "✓"] },
-];
-
-const productionTime: { label: string; values: string[] }[] = [
-  { label: "Sampling", values: ["7–10 days", "7–10 days", "7–10 days"] },
-  { label: "Bulk Production", values: ["25–35 days", "25–35 days", "25–35 days"] },
 ];
 
 /* Product Card with tilt on hover */
@@ -225,240 +185,10 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
   );
 }
 
-/* ─── Comparison table section ─── */
-function ComparisonTable() {
-  const [hoveredRow, setHoveredRow] = useState<number | null>(null);
-
-  const sectionLabel = (label: string, isSub?: boolean) => (
-    <td
-      style={{
-        padding: "10px 14px",
-        color: isSub ? "#8A7E70" : "#C8BFA8",
-        fontWeight: isSub ? 500 : 700,
-        fontSize: isSub ? 12 : 13,
-        fontFamily: "var(--font-dm-sans)",
-        borderBottom: "1px solid rgba(255,255,255,0.04)",
-        whiteSpace: "nowrap",
-        background: "#15130f",
-        position: "sticky",
-        left: 0,
-        zIndex: 2,
-      }}
-    >
-      {label}
-    </td>
-  );
-
-  const cellValue = (val: string, idx: number) => (
-    <td
-      key={idx}
-      style={{
-        padding: "10px 14px",
-        color: val === "✓" ? G : val === "—" ? "#5A5044" : "#8A7E70",
-        fontSize: 13,
-        fontFamily: "var(--font-dm-sans)",
-        borderBottom: "1px solid rgba(255,255,255,0.04)",
-        textAlign: "center",
-        whiteSpace: "nowrap",
-        fontWeight: val === "✓" ? 600 : 400,
-      }}
-    >
-      {val}
-    </td>
-  );
-
-  const renderRow = (row: { label: string; values: string[] }, i: number, isSub?: boolean) => (
-    <tr
-      key={`${isSub ? "sub-" : ""}${row.label}`}
-      onMouseEnter={() => setHoveredRow(i)}
-      onMouseLeave={() => setHoveredRow(null)}
-      style={{
-        transition: "background 0.2s ease",
-        background: hoveredRow === i ? "rgba(201,145,58,0.03)" : "transparent",
-      }}
-    >
-      {sectionLabel(row.label, isSub)}
-      {row.values.map((v, vi) => cellValue(v, vi))}
-    </tr>
-  );
-
-  return (
-    <div style={{ marginTop: 48 }}>
-      <h3
-        data-table-heading=""
-        style={{
-          fontFamily: "var(--font-barlow-condensed)",
-          fontWeight: 900,
-          color: "#F0E8D8",
-          fontSize: "clamp(24px, 3vw, 36px)",
-          margin: 0,
-          opacity: 0,
-        }}
-      >
-        Compare Our Products
-      </h3>
-      <p
-        data-table-intro=""
-        style={{
-          fontSize: 14,
-          lineHeight: 1.7,
-          color: "#8A7E70",
-          fontFamily: "var(--font-dm-sans)",
-          margin: "8px 0 0",
-          opacity: 0,
-        }}
-      >
-        A quick overview to help you choose the right product for your collection. All values are editable for future updates.
-      </p>
-
-      <div
-        data-table-wrapper=""
-        style={{
-          overflowX: "auto",
-          marginTop: 20,
-          border: "1px solid rgba(255,255,255,0.06)",
-          borderRadius: 6,
-          opacity: 0,
-        }}
-      >
-        <table style={{ width: "100%", borderCollapse: "collapse", minWidth: 700 }}>
-          <thead>
-            <tr style={{ borderBottom: "1px solid rgba(201,145,58,0.15)" }}>
-              <th
-                style={{
-                  padding: "12px 14px",
-                  textAlign: "left",
-                  color: "#F0E8D8",
-                  fontFamily: "var(--font-dm-sans)",
-                  fontSize: 12,
-                  fontWeight: 600,
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  background: "#15130f",
-                  position: "sticky",
-                  left: 0,
-                  zIndex: 3,
-                  width: 180,
-                }}
-              >
-                Feature
-              </th>
-              {products.map((p) => (
-                <th
-                  key={p.id}
-                  style={{
-                    padding: "12px 14px",
-                    textAlign: "center",
-                    color: G,
-                    fontFamily: "var(--font-barlow-condensed)",
-                    fontSize: 16,
-                    fontWeight: 700,
-                    letterSpacing: "0.02em",
-                  }}
-                >
-                  {p.name}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {/* Main comparison rows */}
-            {comparisonRows.map((row, i) => renderRow(row, i))}
-
-            {/* Branding Options sub-section */}
-            <tr>
-              <td
-                colSpan={4}
-                style={{
-                  padding: "10px 14px",
-                  color: G,
-                  fontWeight: 700,
-                  fontSize: 12,
-                  fontFamily: "var(--font-dm-sans)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  borderBottom: "1px solid rgba(201,145,58,0.1)",
-                  background: "rgba(201,145,58,0.04)",
-                }}
-              >
-                Branding Options
-              </td>
-            </tr>
-            {brandingOptions.map((row, i) => renderRow(row, i, true))}
-
-            {/* Recommended Fabrics sub-section */}
-            <tr>
-              <td
-                colSpan={4}
-                style={{
-                  padding: "10px 14px",
-                  color: G,
-                  fontWeight: 700,
-                  fontSize: 12,
-                  fontFamily: "var(--font-dm-sans)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  borderBottom: "1px solid rgba(201,145,58,0.1)",
-                  background: "rgba(201,145,58,0.04)",
-                }}
-              >
-                Recommended Fabrics
-              </td>
-            </tr>
-            {recommendedFabrics.map((row, i) => renderRow(row, i, true))}
-
-            {/* Fit Options sub-section */}
-            <tr>
-              <td
-                colSpan={4}
-                style={{
-                  padding: "10px 14px",
-                  color: G,
-                  fontWeight: 700,
-                  fontSize: 12,
-                  fontFamily: "var(--font-dm-sans)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  borderBottom: "1px solid rgba(201,145,58,0.1)",
-                  background: "rgba(201,145,58,0.04)",
-                }}
-              >
-                Fit Options
-              </td>
-            </tr>
-            {fitOptions.map((row, i) => renderRow(row, i, true))}
-
-            {/* Production Time sub-section */}
-            <tr>
-              <td
-                colSpan={4}
-                style={{
-                  padding: "10px 14px",
-                  color: G,
-                  fontWeight: 700,
-                  fontSize: 12,
-                  fontFamily: "var(--font-dm-sans)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.08em",
-                  borderBottom: "1px solid rgba(201,145,58,0.1)",
-                  background: "rgba(201,145,58,0.04)",
-                }}
-              >
-                Production Time
-              </td>
-            </tr>
-            {productionTime.map((row, i) => renderRow(row, i, true))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
-}
-
 export default function ProductShowcase() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  /* GSAP: cards stagger reveal + heading + table */
+  /* GSAP: cards stagger reveal + heading */
   useGSAP(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (!sectionRef.current) return;
@@ -466,9 +196,6 @@ export default function ProductShowcase() {
     const cards = sectionRef.current.querySelectorAll<HTMLElement>("[data-product-card]");
     const heading = sectionRef.current.querySelector<HTMLElement>("[data-section-heading]");
     const goldLine = sectionRef.current.querySelector<HTMLElement>("[data-gold-line]");
-    const tableHeading = sectionRef.current.querySelector<HTMLElement>("[data-table-heading]");
-    const tableIntro = sectionRef.current.querySelector<HTMLElement>("[data-table-intro]");
-    const tableWrapper = sectionRef.current.querySelector<HTMLElement>("[data-table-wrapper]");
 
     if (goldLine) {
       gsap.fromTo(goldLine, { scaleX: 0 }, {
@@ -496,33 +223,6 @@ export default function ProductShowcase() {
         }
       );
     });
-
-    /* Table heading */
-    if (tableHeading) {
-      gsap.fromTo(tableHeading,
-        { y: 20, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.6, ease: "power2.out",
-          scrollTrigger: { trigger: tableHeading, start: "top 88%", toggleActions: "play none none none" } }
-      );
-    }
-
-    /* Table intro */
-    if (tableIntro) {
-      gsap.fromTo(tableIntro,
-        { y: 16, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.5, ease: "power2.out", delay: 0.1,
-          scrollTrigger: { trigger: tableIntro, start: "top 90%", toggleActions: "play none none none" } }
-      );
-    }
-
-    /* Table wrapper */
-    if (tableWrapper) {
-      gsap.fromTo(tableWrapper,
-        { y: 24, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.7, ease: "power2.out", delay: 0.2,
-          scrollTrigger: { trigger: tableWrapper, start: "top 90%", toggleActions: "play none none none" } }
-      );
-    }
 
     return () => ScrollTrigger.getAll().forEach(st => {
       if (st.vars.trigger && sectionRef.current?.contains(st.vars.trigger as Element)) st.kill();
@@ -572,10 +272,10 @@ export default function ProductShowcase() {
             <ProductCard key={product.id} product={product} index={i} />
           ))}
         </div>
-
-        {/* Comparison table */}
-        <ComparisonTable />
       </div>
+
+      {/* Material Library */}
+      <MaterialLibrary />
     </section>
   );
 }
