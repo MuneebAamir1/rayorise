@@ -129,7 +129,6 @@ export default function MaterialLibrary() {
         background: "#1A1612",
         padding: "64px 0 96px",
         position: "relative",
-        overflow: "hidden",
       }}
     >
       {/* Gold top line */}

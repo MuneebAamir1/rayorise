@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { gsap, ScrollTrigger } from "@/lib/gsap-init";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
-import MaterialLibrary from "@/components/MaterialLibrary";
 
 const G = "#C9913A";
 const GL = "#DBAA55";
@@ -273,9 +272,6 @@ export default function ProductShowcase() {
           ))}
         </div>
       </div>
-
-      {/* Material Library */}
-      <MaterialLibrary />
     </section>
   );
 }

@@ -4,6 +4,7 @@ import TrustStrip from "@/components/TrustStrip";
 import WhoWeBuildFor from "@/components/WhoWeBuildFor";
 import About from "@/components/About";
 import ProductShowcase from "@/components/ProductShowcase";
+import MaterialLibrary from "@/components/MaterialLibrary";
 import CustomizationCapabilities from "@/components/CustomizationCapabilities";
 import Process from "@/components/Process";
 import ManufacturingProof from "@/components/ManufacturingProof";
@@ -27,6 +28,7 @@ export default function Home() {
         <WhoWeBuildFor />
         <About />
         <ProductShowcase />
+        <MaterialLibrary />
         <CustomizationCapabilities />
         <Process />
         <ManufacturingProof />
